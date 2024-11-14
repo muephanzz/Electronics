@@ -11,17 +11,41 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
+    padding: 1rem;
+    z-index: 1000;
+  }
 h1 {
     font-size: 24px;
 }
+/* Hero Section Background and Text Styling */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    background-size: auto;
+    background-position: center;
+    background-image: url('images/oppoA18.webp'); /* Initial image */
+    animation: backgroundSlideshow 20s infinite ease-in-out;
+    animation-delay: 3s; /* Delay to let text animation finish */
+  }
+  
+  /* Keyframes for Background Slideshow */
+  @keyframes backgroundSlideshow {
+    0% { background-image: url('images/oppoA3x.webp'); }
+    20% { background-image: url('images/samsungA05.png'); }
+    40% { background-image: url('images/samsungA05s.webp'); }
+    60% { background-image: url('images/vivoY03.jpg'); }
+    80% { background-image: url('images/redmi13c.webp'); }
+    100% { background-image: url('images/samsungA25.png'); } /* Loop back to first image */
+  }
 
 .top-icons {
     display: flex;
@@ -49,7 +73,7 @@ h1 {
     display: none;
     background-color: #333;
     color: #fff;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 50px;
     width: 150px;
@@ -61,17 +85,14 @@ h1 {
     list-style-type: none;
 }
 
+#categories-dropdown {
+    display: none;
+    padding-left: 20px;
+}
+
 #menu-items li {
     padding: 10px;
     cursor: pointer;
-}
-
-#categories-dropdown {
-    display: none;
-    background-color: #f8f8f8;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
 }
 
 #categories-dropdown ul {
@@ -79,7 +100,7 @@ h1 {
 }
 
 #categories-dropdown li {
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -122,3 +143,52 @@ h1 {
     font-size: 24px;
     cursor: pointer;
 }
+/* About Container Styling */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto; /* Center align the container */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid #ddd;
+  }
+  
+  .about-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .about-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+  }
+
+#about, #contact {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    align-items: center;
+  }
+  

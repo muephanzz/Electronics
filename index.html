@@ -16,20 +16,32 @@
             <div id="menu-icon" onclick="toggleMenu()">☰</div>
         </div>
     </header>
+    <!-- Hero Section -->
+<section id="home" class="hero"></section>
 
     <!-- Menu -->
-    <div id="menu-items">
+    <div id="menu-items" class="home">
         <ul>
             <li>Home</li>
             <li onclick="showCategories()">Category</li>
+                <nav>
+                    <ul id="categories-dropdown">
+                            <li><a href="#" onclick="showCategory('smartphones')">Smartphones</a></li>
+                            <li><a href="#" onclick="showCategory('laptops')">Laptops & Computers</a></li>
+                            <li><a href="#" onclick="showCategory('tablets')">Tablets</a></li>
+                            <li><a href="#" onclick="showCategory('headphones')">Headphones & Airpods</a></li>
+                            <li><a href="#" onclick="showCategory('smart-home')">Smart Home Devices</a></li>
+                            <li><a href="#" onclick="showCategory('tv-home')">Television & Home Entertainment</a></li>
+                            <li><a href="#" onclick="showCategory('peripherals')">Computer Peripherals</a></li>
+                    </ul>
+                </nav>
             <li>About Us</li>
             <li>Contact</li>
         </ul>
     </div>
-
     <!-- Category Dropdown -->
     <div id="categories-dropdown">
-        <ul>
+        </ul>
             <li onclick="showCategory('smartphones')">Smartphones</li>
             <li onclick="showCategory('laptops')">Laptops & Computers</li>
             <li onclick="showCategory('tablets')">Tablets</li>
@@ -40,10 +52,10 @@
         </ul>
     </div>
 
-    <!-- Search Bar -->
-    <div id="search-bar">
+    <!-- Search Bar-->
+   <div id="search-bar">
         <input type="text" placeholder="Search products..." oninput="searchProducts(this.value)">
-    </div>
+    </div>  
 
     <!-- Product List -->
     <div id="product-list"></div>
@@ -74,6 +86,27 @@
             <button onclick="buyNow()">Buy Now</button>
         </div>
     </div>
+
+    <!-- About Us Section -->
+<section id="about">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>Welcome to Ephantus Farm Products! We are dedicated to providing you with the freshest, healthiest, and most sustainably grown farm products. Our journey started with a passion for organic farming and a commitment to quality, and we strive to deliver only the best for our customers. From seasonal produce to organic dairy, our selection is carefully curated to ensure peak freshness and flavor. Join us in supporting local agriculture and sustainable farming practices.</p>
+    </div>
+</section>
+  
+  
+    <!-- Contact Section -->
+<section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:muephanzz@gmail.com">muephanzz@gmail.com</a></p>
+      <p>Phone: <a href="tel:+254798229783">+254798229783</a></p>
+</section>
+    
+    <!-- Footer Section -->
+<footer>
+      <p>&copy; 2024 Farm Fresh Products. All rights reserved.</p>
+</footer>
 
     <script src="script.js"></script>
 </body>
