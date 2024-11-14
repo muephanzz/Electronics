@@ -1,194 +1,292 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    z-index: 1000;
-  }
-h1 {
-    font-size: 24px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
+
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.back-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
 /* Hero Section Background and Text Styling */
 .hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    background-size: auto;
-    background-position: center;
-    background-image: url('images/oppoA18.webp'); /* Initial image */
-    animation: backgroundSlideshow 20s infinite ease-in-out;
-    animation-delay: 3s; /* Delay to let text animation finish */
-  }
-  
-  /* Keyframes for Background Slideshow */
-  @keyframes backgroundSlideshow {
-    0% { background-image: url('images/oppoA3x.webp'); }
-    20% { background-image: url('images/samsungA05.png'); }
-    40% { background-image: url('images/samsungA05s.webp'); }
-    60% { background-image: url('images/vivoY03.jpg'); }
-    80% { background-image: url('images/redmi13c.webp'); }
-    100% { background-image: url('images/samsungA25.png'); } /* Loop back to first image */
-  }
+  position: relative;
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  animation: backgroundSlideshow 20s infinite ease-in-out;
+  animation-delay: 3s; /* Delay to let text animation finish */
+}
 
+@keyframes backgroundSlideshow {
+  0% { background-image: url('images/oppoA3x.webp'); }
+  20% { background-image: url('images/samsungA05.png'); }
+  40% { background-image: url('images/samsungA05s.webp'); }
+  60% { background-image: url('images/vivoY03.jpg'); }
+  80% { background-image: url('images/redmi13c.webp'); }
+  100% { background-image: url('images/samsungA25.png'); }
+}
+
+/* Menu Styling */
 .top-icons {
-    display: flex;
-    gap: 10px;
-    cursor: pointer;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
 }
 
 #cart-icon, #menu-icon {
-    position: relative;
-    font-size: 24px;
+  position: relative;
+  font-size: 24px;
 }
 
 #cart-count {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    padding: 2px 5px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 5px;
 }
 
 #menu-items {
-    display: none;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    right: 0;
-    top: 50px;
-    width: 150px;
-    padding: 10px;
-    border-radius: 5px;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#menu-items.active {
+  display: block;
 }
 
 #menu-items ul {
-    list-style-type: none;
-}
-
-#categories-dropdown {
-    display: none;
-    padding-left: 20px;
+  list-style-type: none;
+  padding: 0;
 }
 
 #menu-items li {
-    padding: 10px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
 }
 
-#categories-dropdown ul {
-    list-style-type: none;
+/* Product Details Section */
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em;
+  background-color: #fff;
+  margin: 1em auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#categories-dropdown li {
-    padding: 10px;
-    cursor: pointer;
+.product-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
 }
 
+.product-info {
+  padding: 1em 2em;
+  max-width: 400px;
+}
+
+.product-info h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.5em;
+  color: #28a745;
+  margin: 1em 0;
+}
+
+.product-options {
+  margin: 1em 0;
+}
+
+.product-options label {
+  margin-right: 10px;
+}
+
+.purchase-buttons {
+  margin-top: 1em;
+}
+
+.purchase-buttons button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5em;
+  font-size: 1em;
+}
+
+.purchase-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* About Container Styling */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto; /* Center align the container */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #ddd;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+}
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 0.9rem;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Search Bar Styling */
 #search-bar {
-    margin: 20px;
-    text-align: center;
+  margin: 20px;
+  text-align: center;
 }
 
-#product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+#search-bar input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .product {
-    width: 200px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
 }
 
-.product img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+.product-image {
+  width: 100%;
+  height: auto;
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .close-btn {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
 }
-/* About Container Styling */
-.about-container {
-    max-width: 800px;
-    margin: 0 auto; /* Center align the container */
-    padding: 20px;
-    background-color: #f9f9f9; /* Light background color */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border: 1px solid #ddd;
-  }
-  
-  .about-container h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center;
-  }
-  
-  .about-container p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-    text-align: center;
+
+@media screen and (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    padding: 1em;
   }
 
-#about, #contact {
-    padding: 40px 20px;
-    text-align: center;
+  .product-image img {
+    max-width: 100%;
   }
-  
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    z-index: 1000;
-    padding: 20px;
+
+  .product-info {
+    padding: 1em;
+    max-width: 100%;
   }
-  
-  footer p {
-    font-size: 1rem;
-    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    height: 50vh;
   }
-  
+
+  header {
+    padding: 0.8em;
+    font-size: 1.2em;
+  }
+
+  .back-link {
+    font-size: 0.9em;
+  }
+}

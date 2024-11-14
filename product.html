@@ -3,64 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ephantus Electronics - Quality Electronics at Affordable Prices">
-    <title>Ephantus Electronics (EE)</title>
+    <meta name="description" content="Product Details - Ephantus Electronics">
+    <title>Product Details | Ephantus Electronics</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Ephantus Electronics (EE)</h1>
-        <div class="top-icons">
-            <div id="cart-icon">🛒<span id="cart-count">0</span></div>
-            <div id="menu-icon" onclick="toggleMenu()">☰</div>
-        </div>
-        <!-- Menu -->
-        <div id="menu-items" class="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li onclick="showCategories()">Category</li>
-                <nav>
-                    <ul id="categories-dropdown">
-                        <li><a href="#" onclick="showCategory('smartphones')">Smartphones</a></li>
-                        <li><a href="#" onclick="showCategory('laptops')">Laptops & Computers</a></li>
-                        <li><a href="#" onclick="showCategory('tablets')">Tablets</a></li>
-                        <li><a href="#" onclick="showCategory('headphones')">Headphones & Airpods</a></li>
-                        <li><a href="#" onclick="showCategory('smart-home')">Smart Home Devices</a></li>
-                        <li><a href="#" onclick="showCategory('tv-home')">Television & Home Entertainment</a></li>
-                        <li><a href="#" onclick="showCategory('peripherals')">Computer Peripherals</a></li>
-                    </ul>
-                </nav>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contacts</a></li>
-            </ul>
-        </div>
+        <h1>Ephantus Electronics</h1>
+        <a href="index.html" class="back-link">Back to Home</a>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero"></section>
-
-    <!-- Search Bar -->
-    <div id="search-bar">
-        <input type="text" placeholder="Search products..." oninput="searchProducts(this.value)">
-    </div>  
-
-    <!-- Product List -->
-    <div id="product-list" class="product-list"></div>
-
-    <!-- About Us Section -->
-    <section id="about">
-        <div class="about-container">
-            <h2>About Us</h2>
-            <p>Welcome to Ephantus Electronics! We are dedicated to providing you with the highest-quality electronics at affordable prices. Our journey started with a passion for technology and a commitment to delivering excellent service.</p>
+    <!-- Product Details Section -->
+    <section id="product-details" class="product-details">
+        <div class="product-image">
+            <img id="product-img" src="" alt="Product Image">
         </div>
-    </section>
+        <div class="product-info">
+            <h2 id="product-name">Product Name</h2>
+            <p id="product-description">Product description goes here...</p>
+            <div class="product-price" id="product-price">$0.00</div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:muephanzz@gmail.com">muephanzz@gmail.com</a></p>
-        <p>Phone: <a href="tel:+254798229783">+254798229783</a></p>
+            <div class="product-options">
+                <label for="color">Color:</label>
+                <select id="color">
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Blue</option>
+                </select>
+
+                <label for="storage">Storage:</label>
+                <select id="storage">
+                    <option>64GB</option>
+                    <option>128GB</option>
+                    <option>256GB</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1">
+            </div>
+
+            <div class="purchase-buttons">
+                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -69,14 +56,7 @@
     </footer>
 
     <script>
-        // Toggle menu visibility
-        function toggleMenu() {
-            const menuItems = document.getElementById("menu-items");
-            menuItems.classList.toggle("active");
-        }
-
-        // Sample product data with image URLs
-        const products = [
+const products = [
     { 
         id: 1, 
         name: "Samsung A05s", 
@@ -185,30 +165,34 @@
         Connectivity: Dual sim, 2G, 3G, 4G, WI-FI
         Colors: Dreamy Purple,Midnight Black,Sage Green,Starry Blue`}
 ];
-        // Render products on the page with images
-        function renderProducts() {
-            const productList = document.getElementById("product-list");
-            productList.innerHTML = ""; // Clear existing content
-            products.forEach(product => {
-                const productDiv = document.createElement("div");
-                productDiv.classList.add("product");
-                productDiv.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product-image">
-                    <h3>${product.name}</h3>
-                    <p>${product.price}</p>
-                    <button onclick="viewProduct(${product.id})">View Details</button>
-                `;
-                productList.appendChild(productDiv);
-            });
+
+        // Function to load product details based on the ID from URL
+        function loadProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                document.getElementById("product-name").textContent = product.name;
+                document.getElementById("product-description").textContent = product.description;
+                document.getElementById("product-price").textContent = product.price;
+                document.getElementById("product-img").src = product.image;
+                document.getElementById("product-img").alt = product.name;
+            } else {
+                document.getElementById("product-details").innerHTML = "<p>Product not found.</p>";
+            }
         }
 
-        // Redirect to product detail page with product ID
-        function viewProduct(productId) {
-            window.location.href = `product.html?id=${productId}`;
+        // Call function to load product details on page load
+        window.onload = loadProductDetails;
+
+        function addToCart() {
+            alert("Product added to cart!");
         }
 
-        // Initial render of products
-        renderProducts();
+        function buyNow() {
+            alert("Redirecting to checkout...");
+        }
     </script>
 </body>
 </html>
