@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+  header {
+    background-color: #007bff;
+    padding: 15px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  #search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #search-bar {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .search-button {
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007bff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Product Details Section */
+  .product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1000px;
+  }
+  
+  .product-image {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-info {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .product-info h1 {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .add-to-cart {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-to-home {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .back-to-home:hover {
+    color: #0056b3;
+  }
+  
