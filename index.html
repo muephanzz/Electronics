@@ -3,212 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ephantus Electronics - Quality Electronics at Affordable Prices">
-    <title>Ephantus Electronics (EE)</title>
+    <title>Product Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Ephantus Electronics (EE)</h1>
-        <div class="top-icons">
-            <div id="cart-icon">🛒<span id="cart-count">0</span></div>
-            <div id="menu-icon" onclick="toggleMenu()">☰</div>
-        </div>
-        <!-- Menu -->
-        <div id="menu-items" class="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li onclick="showCategories()">Category</li>
-                <nav>
-                    <ul id="categories-dropdown">
-                        <li><a href="#" onclick="showCategory('smartphones')">Smartphones</a></li>
-                        <li><a href="#" onclick="showCategory('laptops')">Laptops & Computers</a></li>
-                        <li><a href="#" onclick="showCategory('tablets')">Tablets</a></li>
-                        <li><a href="#" onclick="showCategory('headphones')">Headphones & Airpods</a></li>
-                        <li><a href="#" onclick="showCategory('smart-home')">Smart Home Devices</a></li>
-                        <li><a href="#" onclick="showCategory('tv-home')">Television & Home Entertainment</a></li>
-                        <li><a href="#" onclick="showCategory('peripherals')">Computer Peripherals</a></li>
-                    </ul>
-                </nav>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contacts</a></li>
-            </ul>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Search for products..." oninput="searchProducts(this.value)">
+            <div class="search-button">
+                <i class="search-icon fa fa-search"></i>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero"></section>
-
-    <!-- Search Bar -->
-    <div id="search-bar">
-        <input type="text" placeholder="Search products..." oninput="searchProducts(this.value)">
-    </div>  
-
-    <!-- Product List -->
-    <div id="product-list" class="product-list"></div>
-
-    <!-- About Us Section -->
-    <section id="about">
-        <div class="about-container">
-            <h2>About Us</h2>
-            <p>Welcome to Ephantus Electronics! We are dedicated to providing you with the highest-quality electronics at affordable prices. Our journey started with a passion for technology and a commitment to delivering excellent service.</p>
+    <!-- Product List Section -->
+    <div id="product-list" class="product-list">
+        <!-- Example Product -->
+        <div class="product">
+            <div class="product-image">
+                <img src="images/samsungA05s.webp" alt="Samsung A05s">
+            </div>
+            <h3>Samsung A05s</h3>
+            <p>4GB RAM, 64GB Storage</p>
+            <div class="price">$799</div>
+            <a href="products.html?id=1" class="details-link">View Details</a>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:muephanzz@gmail.com">muephanzz@gmail.com</a></p>
-        <p>Phone: <a href="tel:+254798229783">+254798229783</a></p>
-    </section>
+        <div class="product">
+            <div class="product-image">
+                <img src="images/samsungA25.png" alt="Samsung A25">
+            </div>
+            <h3>Samsung A25</h3>
+            <p>128GB Storage, 6GB RAM</p>
+            <div class="price">$799</div>
+            <a href="products.html?id=2" class="details-link">View Details</a>
+        </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Ephantus Electronics. All rights reserved.</p>
-    </footer>
+        <div class="product">
+            <div class="product-image">
+                <img src="images/samsungA05.png" alt="Samsung A05">
+            </div>
+            <h3>Samsung A05</h3>
+            <p>4GB RAM, 64GB Storage</p>
+            <div class="price">$799</div>
+            <a href="products.html?id=3" class="details-link">View Details</a>
+        </div>
 
+        <div class="product">
+            <div class="product-image">
+                <img src="images/oppoA18.webp" alt="Oppo A18">
+            </div>
+            <h3>Oppo A18</h3>
+            <p>4GB + 128GB, 5000mAh Battery</p>
+            <div class="price">$799</div>
+            <a href="products.html?id=4" class="details-link">View Details</a>
+        </div>
+
+        <!-- More products can be added here in the same format -->
+    </div>
+
+    <!-- Bottom Icons Section -->
+    <div class="bottom-icons">
+        <a href="#home">
+            <i class="fa fa-home"></i>
+            <div>Home</div>
+        </a>
+        <a href="#category">
+            <i class="fa fa-list"></i>
+            <div>Category</div>
+        </a>
+        <a href="#cart">
+            <i class="fa fa-shopping-cart"></i>
+            <div>Cart</div>
+        </a>
+        <a href="#contact">
+            <i class="fa fa-phone"></i>
+            <div>Contact</div>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
     <script>
-        // Toggle menu visibility
-        function toggleMenu() {
-            const menuItems = document.getElementById("menu-items");
-            menuItems.classList.toggle("active");
-        }
-
-        // Sample product data with image URLs
-        const products = [
-    { 
-        id: 1, 
-        name: "Samsung A05s", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/samsungA05s.webp', 
-        description: `4GB RAM, 64GB Storage
-        5000 mAh Battery
-        50MP Main Camera 13MP Front Camera
-        AndroidTM 12 upgradable to 13
-        6.7 Screen display`}
-    ,{
-        id: 2, 
-        name: "Samsung A25", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/samsungA25.png', 
-        description: `128 Storage
-        6GB RAM
-        5000 mAh Battery
-        50MP Main Camera, 13MP Front Camera
-        AndroidTM 14
-        Side-mounted Fingerprint Sensor
-        6.5″ Screen`}
-    ,{
-        id: 3, 
-        name: "Samsung A05", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/samsungA05.png', 
-        description: `4GB RAM, 64GB Storage
-        5000 mAh Battery
-        50MP Camera
-        AndroidTM 13 Operating System
-        Dual SIM
-        6.7" Screen display`}
-    ,{
-        id: 3, 
-        name: "Samsung A15", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/samsungA15.png', 
-        description: `4GB RAM, 128GB Storage
-        5,000mAh Battery
-        50MP Main Camera, 13MP Front Camera
-        AndroidTM 14
-        Dual SIM
-        6.5″ Screen`}
-    ,{
-        id: 4, 
-        name: "Oppo A18", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/oppoA18.webp', 
-        description: `OPPO A18 6.56" 90Hz Display 4GB+128GB 8MP Android 13 Side Fingerprint 5000mAh Type-C Charge Smart Phones IP54 Dust Splash Resistant`}
-    ,{
-        id: 5, 
-        name: "Oppo A3x", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/oppoA3x.webp', 
-        description: `Oppo A3x Smart phone,6.67 inches, 128GB ROM + 4GB RAM, Battery: 5100mAh (Dual SIM) 50MP`}
-    ,{
-        id: 6, 
-        name: "Vivo Y03", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/vivoY03.jpg', 
-        description: `Vivo Y03 - 6.56'' - 4GB RAM + 64GB ROM - Dual SIM - 5000mAh - Space Black (2YRs WRTY)`}
-    ,{
-         id: 7, 
-        name: "Vivo Y17", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/vivoY03.jpg', 
-        description: `Vivo Y17s - 6.56'', 6GB RAM + 128GB ROM - (Dual SIM) - 50MP - 5000mAh - Green`}
-    ,{
-        id: 8, 
-        name: " Redmi 13c", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/redmi13c.webp', 
-        description: `Network: Dual Sim, 3G, 4G, VoLTE, Wi-Fi
-        Processor: Helio G85, Octa Core, 2 GHz
-        RAM: 8GB
-        ROM: 256GB
-        Battery: 5000 mAh Battery
-        Display: 6.74 inches, 720 x 1650 px
-        ROM: 50 MP + Depth Sensor Rear & 8 MP Front Camera
-        OS: Android v13
-        25 months local warranty`}
-    ,{
-        id: 9, 
-        name: " Redmi 14c", 
-        price: 799, 
-        category: 'smartphones', 
-        image: 'images/redmi14c.webp', 
-        description: `RAM: 8GB
-        Internal Storage: 256GB
-        Battery: 5160 mAh
-        Main Camera: 50MP+2MP+0.08MP
-        Front Camera: 13MP
-        Display: 6.88 inches
-        Processor: Mediatek Helio G81 Ultra
-        OS: Android 14
-        Connectivity: Dual sim, 2G, 3G, 4G, WI-FI
-        Colors: Dreamy Purple,Midnight Black,Sage Green,Starry Blue`}
-];
-        // Render products on the page with images
-        function renderProducts() {
-            const productList = document.getElementById("product-list");
-            productList.innerHTML = ""; // Clear existing content
+        function searchProducts(query) {
+            const products = document.querySelectorAll('.product');
             products.forEach(product => {
-                const productDiv = document.createElement("div");
-                productDiv.classList.add("product");
-                productDiv.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product-image">
-                    <h3>${product.name}</h3>
-                    <p>${product.price}</p>
-                    <button onclick="viewProduct(${product.id})">View Details</button>
-                `;
-                productList.appendChild(productDiv);
+                const name = product.querySelector('h3').textContent.toLowerCase();
+                if (name.includes(query.toLowerCase())) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
             });
         }
-
-        // Redirect to product detail page with product ID
-        function viewProduct(productId) {
-            window.location.href = `product.html?id=${productId}`;
-        }
-
-        // Initial render of products
-        renderProducts();
     </script>
 </body>
 </html>

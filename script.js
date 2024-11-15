@@ -108,57 +108,10 @@ const products = [
         Connectivity: Dual sim, 2G, 3G, 4G, WI-FI
         Colors: Dreamy Purple,Midnight Black,Sage Green,Starry Blue`}
 ];
-
-function toggleMenu() {
-    const menu = document.getElementById("menu-items");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
-function showCategories() {
-    const categoriesDropdown = document.getElementById('categories-dropdown');
-    categoriesDropdown.style.display = categoriesDropdown.style.display === 'block' ? 'none' : 'block';
-}
-
-function showCategory(category) {
-    const filteredProducts = products.filter(product => product.category === category);
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = '';
-
-    filteredProducts.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.classList.add('product');
-        productDiv.onclick = () => showProductDetails(product);
-        productDiv.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <div class="price">$${product.price}</div>
-        `;
-        productList.appendChild(productDiv);
-    });
-}
-
-function showProductDetails(product) {
-    document.getElementById('product-title').textContent = product.name;
-    document.getElementById('product-image').src = product.image;
-    document.getElementById('product-description').textContent = product.description;
-    document.getElementById('product-price').textContent = `Price: $${product.price}`;
-    document.getElementById('product-modal').style.display = 'block';
-}
-
-function closeModal() {
-    document.getElementById('product-modal').style.display = 'none';
-}
-
-function addToCart() {
-    const productTitle = document.getElementById('product-title').textContent;
-    const product = products.find(p => p.name === productTitle);
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
     cart.push(product);
     document.getElementById('cart-count').textContent = cart.length;
-}
-
-function buyNow() {
-    alert("Proceeding to checkout...");
 }
 
 function searchProducts(query) {
@@ -171,11 +124,25 @@ function searchProducts(query) {
         productDiv.classList.add('product');
         productDiv.onclick = () => showProductDetails(product);
         productDiv.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <div class="price">$${product.price}</div>
         `;
         productList.appendChild(productDiv);
     });
+}
+
+function showProductDetails(product) {
+    document.getElementById('product-title').textContent = product.name;
+    document.getElementById('product-image').src = product.image;
+    document.getElementById('product-description').textContent = product.description;
+    document.getElementById('product-price').textContent = `$${product.price}`;
+    document.getElementById('product-modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('product-modal').style.display = 'none';
 }
