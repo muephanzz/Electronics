@@ -9,7 +9,7 @@
 /* General container styling */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust width as needed */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust width as needed */
   gap: 16px; /* Space between items */
   padding: 16px;
   list-style: none; /* For lists if applicable */
