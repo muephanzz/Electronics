@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
-    <link rel="stylesheet" href="stylep.css">
+    <link rel="stylesheet" href="styles/stylep.css">
 </head>
 <body>
-    <div id="product-details" class="product-details"></div>
+  <div id="product-details" class="product-details">
+<button class="call-to-order" onclick="callToOrder()">Call to Order</button>
 
     <script>
         // Sample product data
         const products = {
-            1: { name: "Oppo A18", description: "4GB RAM, 64GB Storage. Oppo A18 comes with a high-resolution camera, long battery life, and a fast processor to handle all your daily tasks with ease.", price: "Ksh 2,999", image: "smartphones/oppoA18.jpg" },
+            1: { name: "Oppo A18", description: "4GB RAM, 64GB Storage. Oppo A18 comes with a high-resolution camera, long battery life, and a fast processor to handle all your daily tasks with ease.", price: "Ksh 2,999", image: "smartphones/oppoA18.jpg"},
             2: { name: "Oppo A3x", description: "Oppo A3x features a sleek design, a vibrant display, and reliable performance for everyday tasks at an affordable price.", price: "Ksh 2,099", image: "smartphones/oppoA3x.jpg" },
             3: { name: "Redmi 13c", description: "Redmi 13c offers excellent storage, sharp photography capabilities, and an intuitive user interface for seamless use.", price: "Ksh 18,499", image: "smartphones/redmi13c.jpg" },
             4: { name: "Redmi 14c", description: "Redmi 14c combines a powerful battery, advanced security features, and a crisp display for an outstanding user experience.", price: "Ksh 12,799", image: "smartphones/redmi14c.jpg" },
@@ -125,6 +126,7 @@
         <p><strong>Price:</strong> ${product.price}</p>
         <p>${product.description}</p>
         <a href="index.html">Back to Products</a>
+        <a class="contacts" href="tel:+254798229783"><img src="handle/phone.jpg"></a>
       `;
     } else {
       productDetails.innerHTML = `
