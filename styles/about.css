@@ -1,0 +1,44 @@
+/* About Container Styling */
+.about-container {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #ddd;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding: 6px;
+  color: #020000;
+  text-align: left;
+}
+
+#about, #contact {
+  margin: 5px;
+  background-color: #f3d3d3;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+#contact h2{
+  padding: 20px;
+}
+
+#contact a{
+  padding: 2px;
+}
+#contact{
+padding: 15px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+border: 1px solid #ddd;
+}

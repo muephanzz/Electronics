@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="stylep.css">
+</head>
+<body>
+    <div id="product-details" class="product-details"></div>
+
+    <script>
+        // Sample product data
+        const products = {
+            1: { name: "Oppo A18", description: "4GB RAM, 64GB Storage. Oppo A18 comes with a high-resolution camera, long battery life, and a fast processor to handle all your daily tasks with ease.", price: "Ksh 2,999", image: "smartphones/oppoA18.jpg" },
+            2: { name: "Oppo A3x", description: "Oppo A3x features a sleek design, a vibrant display, and reliable performance for everyday tasks at an affordable price.", price: "Ksh 2,099", image: "smartphones/oppoA3x.jpg" },
+            3: { name: "Redmi 13c", description: "Redmi 13c offers excellent storage, sharp photography capabilities, and an intuitive user interface for seamless use.", price: "Ksh 18,499", image: "smartphones/redmi13c.jpg" },
+            4: { name: "Redmi 14c", description: "Redmi 14c combines a powerful battery, advanced security features, and a crisp display for an outstanding user experience.", price: "Ksh 12,799", image: "smartphones/redmi14c.jpg" },
+            5: { name: "Samsung A05", description: "Samsung A05 offers a budget-friendly smartphone experience with a durable build, good battery life, and clear display.", price: "Ksh 3,099", image: "smartphones/samsungA05.jpg" },
+            6: { name: "Samsung A05s", description: "Samsung A05s is designed for users who value simplicity and efficiency with a lightweight build and essential features.", price: "Ksh 3,099", image: "smartphones/samsungA05s.jpg" },
+            7: { name: "Samsung A15", description: "Samsung A15 comes equipped with advanced storage, smooth multitasking capabilities, and a high-resolution display.", price: "Ksh 18,099", image: "smartphones/samsungA15.jpg" },
+            8: { name: "Samsung A25", description: "Samsung A25 delivers high-end performance with ample storage, a premium build, and a captivating user interface.", price: "Ksh 21,499", image: "smartphones/samsungA25.jpg" },
+            9: { name: "vivo Y03", description: "vivo Y03 is tailored for first-time smartphone users, featuring a friendly interface, reliable battery, and essential features.", price: "Ksh 2,999", image: "smartphones/vivoY03.jpg" },
+            10: { name: "Mkopa X2", description: "Mkopa X2 combines accessibility with functionality, offering dependable storage and performance at a reasonable price.", price: "Ksh 3,299", image: "smartphones/X2.jpg" },
+            11: { name: "Mkopa X20", description: "Mkopa X20 boasts an impressive combination of storage and performance, making it ideal for professionals and heavy users.", price: "Ksh 4,199", image: "smartphones/X20.jpg" },
+            12: { name: "Samsung A05", description: "Samsung A05 redefines affordability with a durable build, essential features, and a compact design for easy handling.", price: "Ksh 3,099", image: "smartphones/samsungA05.jpg" },
+            // Adding laptop products
+            13: { name: "Lenovo IdeaPad", description: "4GB RAM, 256GB SSD. A reliable laptop for daily tasks and light computing needs.", price: "Ksh 21,999", image: "lapi/lapi1.jpg" },
+            14: { name: "HP Pavilion", description: "8GB RAM, 500GB HDD. Perfect for multitasking and medium-level productivity.", price: "Ksh 23,499", image: "lapi/lapi2.jpg" },
+            15: { name: "Dell Inspiron", description: "4GB RAM, 500GB HDD. A versatile laptop for both work and entertainment.", price: "Ksh 20,399", image: "lapi/lapi3.jpg" },
+            16: { name: "Acer Aspire", description: "8GB RAM, 256GB SSD. Lightweight and powerful, ideal for students.", price: "Ksh 19,899", image: "lapi/lapi4.jpg" },
+            17: { name: "Asus VivoBook", description: "16GB RAM, 512GB SSD. A premium laptop with advanced storage and speed.", price: "Ksh 26,499", image: "lapi/lapi5.jpg" },
+            18: { name: "HP ProBook", description: "8GB RAM, 1TB HDD. Built for performance and long-term reliability.", price: "Ksh 19,899", image: "lapi/lapi6.jpg" },
+            19: { name: "Lenovo ThinkPad", description: "4GB RAM, 256GB SSD. Designed for professionals with a focus on durability.", price: "Ksh 22,999", image: "lapi/lapi7.jpg" },
+            20: { name: "HP EliteBook", description: "4GB RAM, 500GB HDD. A compact laptop with essential features for work.", price: "Ksh 17,999", image: "lapi/lapi8.jpg" },
+            21: { name: "Asus ZenBook", description: "8GB RAM, 256GB SSD. Sleek and efficient, suitable for creative work.", price: "Ksh 22,299", image: "lapi/lapi9.jpg" },
+            22: { name: "MacBook Air", description: "16GB RAM, 1TB SSD. Premium design and seamless performance.", price: "Ksh 23,999", image: "lapi/lapi10.jpg" },
+            // Adding headphones products 
+            23: { name: "Wireless Over-Ear Headphones", description: "Noise-cancelling, 20-hour battery life", price: "Ksh 499", image: "head/head1.jpg" },
+            24: { name: "Bluetooth In-Ear Earbuds", description: "Compact design, sweat-resistant", price: "Ksh 699", image: "head/head2.jpg" },
+            25: { name: "Wired On-Ear Headphones", description: "Deep bass, adjustable headband", price: "Ksh 649", image: "head/head3.jpg" },
+            26: { name: "Wireless Sports Earbuds", description: "Secure fit, 15-hour battery life", price: "Ksh 549", image: "head/head4.jpg" },
+            27: { name: "Basic Wired Earphones", description: "Lightweight, clear audio", price: "Ksh 199", image: "head/head5.jpg" },
+            28: { name: "Studio Monitor Headphones", description: "High fidelity, over-ear comfort", price: "Ksh 499", image: "head/head6.jpg" },
+            29: { name: "Gaming Headset", description: "Noise isolation, built-in mic", price: "Ksh 449", image: "head/head7.jpg" },
+            30: { name: "Foldable Over-Ear Headphones", description: "Compact design, immersive sound", price: "Ksh 449", image: "head/head8.jpg" },
+            31: { name: "Noise-Cancelling Earbuds", description: "Ambient mode, portable case", price: "Ksh 299", image: "head/head9.jpg" },
+            32: { name: "Wired Gaming Headset", description: "RGB lighting, surround sound", price: "Ksh 449", image: "head/head10.jpg" },
+            33: { name: "True Wireless Earbuds", description: "Bluetooth 5.0, touch controls", price: "Ksh 699", image: "head/head11.jpg" },
+            34: { name: "Lightweight Wired Earphones", description: "Comfortable fit, noise-isolating", price: "Ksh 199", image: "head/head12.jpg" },
+            35: { name: "On-Ear Wireless Headphones", description: "Foldable, 15-hour playtime", price: "Ksh 449", image: "head/head13.jpg" },
+            36: { name: "Premium Wireless Earbuds", description: "Fast charging, IPX7 waterproof", price: "Ksh 499", image: "head/head14.jpg" },
+            37: { name: "High-End Gaming Headset", description: "7.1 surround sound, LED lights", price: "Ksh 799", image: "head/head15.jpg" },
+            38: { name: "Portable Wireless Earphones", description: "Compact case, 12-hour battery", price: "Ksh 699", image: "head/head16.jpg" },
+            39: { name: "Comfort-Fit Earbuds", description: "Dual driver, magnetic design", price: "Ksh 699", image: "head/head17.jpg" },
+            40: { name: "Affordable Earphones", description: "Decent sound, lightweight design", price: "Ksh 249", image: "head/head18.jpg" },
+            41: { name: "Smart LED Bulb", description: "Adjustable brightness, Wi-Fi controlled", price: "Ksh 899", image: "smart/smart1.jpg" },
+            42: { name: "Smart Plug", description: "Energy monitoring, remote control", price: "Ksh 699", image: "smart/smart2.jpg" },
+            43: { name: "Smart Thermostat", description: "Temperature control, voice-activated", price: "Ksh 3,299", image: "smart/smart3.jpg" },
+            44: { name: "Smart Door Lock", description: "Keyless entry, app-controlled", price: "Ksh 4,499", image: "smart/smart4.jpg" },
+            45: { name: "Smart Security Camera", description: "1080p HD, night vision", price: "Ksh 2,499", image: "smart/smart5.jpg" },
+            46: { name: "Smart Smoke Detector", description: "Wi-Fi connected, real-time alerts", price: "Ksh 1,499", image: "smart/smart6.jpg" },
+            47: { name: "Smart Light Strip", description: "RGB color changing, app-controlled", price: "Ksh 1,199", image: "smart/smart7.jpg" },
+            48: { name: "Smart Plug Socket", description: "Control from anywhere, surge protection", price: "Ksh 999", image: "smart/smart8.jpg" },
+            49: { name: "Smart Doorbell", description: "1080p camera, motion detection", price: "Ksh 2,999", image: "smart/smart9.jpg" },
+            50: { name: "Smart Vacuum Cleaner", description: "App control, automatic charging", price: "Ksh 9,999", image: "smart/smart10.jpg" },
+            51: { name: "Smart Air Purifier", description: "HEPA filter, app-controlled", price: "Ksh 6,499", image: "smart/smart11.jpg" },
+            52: { name: "Smart Garden Irrigation", description: "Wi-Fi controlled, water-saving", price: "Ksh 2,199", image: "smart/smart12.jpg" },
+            53: { name: "Smart Ceiling Fan", description: "App-controlled, energy efficient", price: "Ksh 5,499", image: "smart/smart13.jpg" },
+            54: { name: "Smart Mirror", description: "Touchscreen, voice assistant", price: "Ksh 8,999", image: "smart/smart14.jpg" },
+            55: { name: "Smart Water Leak Sensor", description: "Wi-Fi connected, real-time alerts", price: "Ksh 1,099", image: "smart/smart15.jpg" },
+            56: { name: "Smart Bluetooth Speaker", description: "Portable, voice assistant integration", price: "Ksh 2,499", image: "smart/smart16.jpg" },
+            57: { name: "Smart Security System", description: "All-in-one, 4 cameras included", price: "Ksh 19,999", image: "smart/smart17.jpg" },
+            58: { name: "Smart Light Bulb Starter Kit", description: "3 bulbs, color-changing, app-controlled", price: "Ksh 2,299", image: "smart/smart18.jpg" },
+            59: { name: "Samsung 32\" LED TV", description: "HD Resolution, Smart TV", price: "Ksh 23,999", image: "tv/tv1.jpg" },
+            60: { name: "LG 43\" LED TV", description: "Full HD, Smart TV", price: "Ksh 21,499", image: "tv/tv2.jpg" },
+            61: { name: "Sony 40\" Full HD TV", description: "Full HD, Smart TV", price: "Ksh 18,999", image: "tv/tv3.jpg" },
+            62: { name: "Vizio 43\" LED TV", description: "Full HD, Smart TV", price: "Ksh 14,499", image: "tv/tv4.jpg" },
+            63: { name: "TCL 32\" LED TV", description: "HD Resolution, Smart TV", price: "Ksh 10,499", image: "tv/tv5.jpg" },
+            64: { name: "Hisense 40\" Full HD TV", description: "Full HD, Smart TV", price: "Ksh 13,999", image: "tv/tv6.jpg" },
+            65: { name: "Panasonic 43\" LED TV", description: "Full HD, Smart TV", price: "Ksh 22,499", image: "tv/tv7.jpg" },
+            66: { name: "Samsung 40\" LED TV", description: "Full HD, Smart TV", price: "Ksh 19,499", image: "tv/tv8.jpg" },
+            67: { name: "LG 43\" LED TV", description: "Full HD, Smart TV", price: "Ksh 21,999", image: "tv/tv9.jpg" },
+            68: { name: "Philips 40\" LED TV", description: "Full HD, Smart TV", price: "Ksh 16,499", image: "tv/tv10.jpg" },
+            69: { name: "Sharp 32\" LED TV", description: "HD Resolution, Smart TV", price: "Ksh 12,499", image: "tv/tv11.jpg" },
+            70: { name: "Vizio 40\" LED TV", description: "Full HD, Smart TV", price: "Ksh 14,999", image: "tv/tv12.jpg" },
+            71: { name: "Samsung 43\" LED TV", description: "Full HD, Smart TV", price: "Ksh 20,999", image: "tv/tv13.jpg" },
+            72: { name: "LG 42\" LED TV", description: "Full HD, Smart TV", price: "Ksh 17,999", image: "tv/tv14.jpg" },
+            73: { name: "TCL 32\" LED TV", description: "HD Resolution, Smart TV", price: "Ksh 9,499", image: "tv/tv15.jpg" },
+            74: { name: "Sony 43\" Full HD TV", description: "Full HD, Smart TV", price: "Ksh 19,999", image: "tv/tv16.jpg" },
+            75: { name: "LG 40\" LED TV", description: "Full HD, Smart TV", price: "Ksh 15,499", image: "tv/tv17.jpg" },
+            76: { name: "Vizio 42\" LED TV", description: "Full HD, Smart TV", price: "Ksh 16,999", image: "tv/tv18.jpg" },
+            77: { name: "LG 40\" LED TV", description: "Full HD, Smart TV", price: "Ksh 14,499", image: "tv/tv19.jpg" },
+            78: { name: "Hisense 43\" LED TV", description: "Full HD, Smart TV", price: "Ksh 20,499", image: "tv/tv20.jpg" },
+            79: { name: "Portable Bluetooth Woofer", description: "10W Power Output, Wireless Connectivity", price: "Ksh 3,999", image: "ent/ent1.jpg" },
+            80: { name: "Mini Amplifier for Speakers", description: "50W Output, Wired Connectivity", price: "Ksh 4,999", image: "ent/ent2.jpg" },
+            81: { name: "Bluetooth Party Woofer", description: "100W Power Output, LED Lights", price: "Ksh 6,499", image: "ent/ent3.jpg" },
+            82: { name: "Wireless Home Theater System", description: "200W Power Output, 5.1 Channel", price: "Ksh 11,999", image: "ent/ent4.jpg" },
+            83: { name: "Portable Stereo Woofer", description: "50W Power Output, Bluetooth Connectivity", price: "Ksh 5,499", image: "ent/ent5.jpg" },
+            84: { name: "Compact Amplifier for Car Audio", description: "80W Output, Wired Connectivity", price: "Ksh 4,299", image: "ent/ent6.jpg" },
+            85: { name: "4-Channel Audio Amplifier", description: "400W Output, Multiple Input Ports", price: "Ksh 8,999", image: "ent/ent7.jpg" },
+            86: { name: "Mini Bluetooth Woofer", description: "25W Output, Compact Design", price: "Ksh 3,299", image: "ent/ent8.jpg" },
+            87: { name: "Portable Bass Woofer", description: "70W Power Output, Bluetooth Connectivity", price: "Ksh 5,999", image: "ent/ent9.jpg" },
+            88: { name: "Subwoofer and Amplifier Combo", description: "150W Power Output, Wired + Wireless", price: "Ksh 13,499", image: "ent/ent10.jpg" },
+            89: { name: "Home Audio Woofer", description: "120W Power Output, Bluetooth + AUX", price: "Ksh 9,499", image: "ent/ent11.jpg" },
+            90: { name: "Wireless Amplifier for Speakers", description: "50W Output, Bluetooth Connectivity", price: "Ksh 6,499", image: "ent/ent12.jpg" },
+            91: { name: "Outdoor Waterproof Woofer", description: "40W Output, Bluetooth + Waterproof", price: "Ksh 7,199", image: "ent/ent13.jpg" },
+            92: { name: "Portable Home Theater Amplifier", description: "150W Output, Wireless and Wired Options", price: "Ksh 12,499", image: "ent/ent14.jpg" },
+            93: { name: "Dual Subwoofer System", description: "250W Output, Deep Bass", price: "Ksh 14,999", image: "ent/ent15.jpg" },
+            94: { name: "High-Fidelity Amplifier", description: "200W Output, Ideal for Home Audio", price: "Ksh 11,299", image: "ent/ent16.jpg" },
+            95: { name: "High-Output Audio Amplifier", description: "350W Output, Perfect for Large Events", price: "Ksh 16,000", image: "ent/ent17.jpg" },
+};
+
+    // Get the product ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    // Find the product details and display them
+    const productDetails = document.getElementById('product-details');
+    if (productId && products[productId]) {
+      const product = products[productId];
+      productDetails.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <h1>${product.name}</h1>
+        <p><strong>Price:</strong> ${product.price}</p>
+        <p>${product.description}</p>
+        <a href="index.html">Back to Products</a>
+      `;
+    } else {
+      productDetails.innerHTML = `
+        <p>Product not found.</p>
+        <a href="index.html">Back to Products</a>
+      `;
+        }
+    </script>
+</body>
+</html>

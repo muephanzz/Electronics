@@ -1,0 +1,31 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  /* Media Query for Phones */
+@media screen and (max-width: 768px) {
+    .product {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px; /* Slightly smaller gap on smaller screens */
+      grid-template-columns: repeat(2, 1fr); /* Two products per row */
+      gap: 15px; /* Adjust gap for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .product {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; /* Further reduced gap for very small screens */
+      grid-template-columns: repeat(2, 1fr); /* Maintain two products per row */
+      gap: 10px; /* Reduced gap for very small screens */
+    }
+  }

@@ -1,0 +1,40 @@
+.home-home {
+    position: relative;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+    width: 100%; /* Desired rectangle width */
+    height: 100px; /* Desired rectangle height */
+}
+
+.home-section{
+    padding-top: 130px;
+    background-color: #110f0fc5;
+}
+
+/* Slideshow container */
+.slideshow {
+    width: 100%;
+    height: 100px;
+}
+
+/* Slideshow images */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Show the active image */
+.slide.active {
+    opacity: 1;
+}
+.slideshow p{
+
+    font-size: 1.2rem;
+    color: #d6cbcb;
+    padding: 20px;
+    text-align: center;
+}

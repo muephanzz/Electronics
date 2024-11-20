@@ -1,0 +1,78 @@
+/* Header Search Bar */
+.header{
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    background-color: #101111;
+  }
+  
+  #search-container {
+    background-color: #272a359a;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #search-bar {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .menu1{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(204, 228, 194);
+  }
+  
+  .menu{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .menu-box{
+    gap: 20px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+  }
+
+  /* Dropdown styling */
+#categories-dropdown {
+    text-align: left;
+    position: absolute;
+    background-color: rgb(204, 228, 194);
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+ 
+  }
+  .device{
+    padding: 5px;
+  }
+  
+  #categories-container:hover #categories-dropdown {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none; /* Removes underline */
+}
+
+ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
