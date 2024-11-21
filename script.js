@@ -27,7 +27,7 @@ function showNextSlide() {
     slides[currentIndex].classList.add('active');
                 
     // Change slides every 3 seconds
-    setInterval(showNextSlide, 4000);
+    setInterval(showNextSlide, 3000);
     });
     
 
@@ -47,3 +47,4 @@ function filterCategory(category) {
     // Optionally hide the dropdown after selection
     toggleMenu();
 }
+
