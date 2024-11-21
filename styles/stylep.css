@@ -51,35 +51,6 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* Navigation arrows */
-.product-details .nav-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: #007BFF;
-    cursor: pointer;
-    user-select: none;
-    z-index: 10;
-}
-
-.product-details .nav-arrow.left {
-    left: -10px;
-}
-
-.product-details .nav-arrow.right {
-    right: -10px;
-}
-
-.product-details .nav-arrow:hover {
-    color: #131516;
-}
-
-
-.call-to-order:hover {
-    background: #0056b3;
-}
-
 /* Back Link Styling */
 .product-details a {
     display: inline-block;
@@ -87,15 +58,18 @@ a:hover {
     color: #007BFF;
     font-weight: bold;
 }
-
+.product-details p1{
+    font-size: 1.1rem;
+    color: #fa1717;
+}
 .product-details a:hover {
     text-decoration: underline;
 }
 .contacts{
     position: absolute;
-    top: 100%;
+    top: 102%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: lightcoral; /* Just for visualization */
+    background-color: rgb(22, 6, 255); /* Just for visualization */
     display: inline-block;  
 }
