@@ -32,7 +32,7 @@ a:hover {
 .product-details {
     max-width: 800px;
     margin: 2rem auto;
-    background: #fff;
+    background: #fafafa;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -65,11 +65,63 @@ a:hover {
 .product-details a:hover {
     text-decoration: underline;
 }
-.contacts{
+
+.arrow-button{
+justify-content: center;
+padding: 15px;
+display: flex; 
+}
+#prevImage {
+    display: flex; 
     position: absolute;
-    top: 102%;
-    left: 50%;
+    top: 20%;
+    left: 7%;
+    transform: translate(-50%, -50%); 
+}
+#nextImage{
+    display: flex; 
+    position: absolute;
+    top: 20%;
+    right: 0%;
     transform: translate(-50%, -50%);
-    background-color: rgb(22, 6, 255); /* Just for visualization */
-    display: inline-block;  
+   
+}
+
+.product-specifications{
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.add-to-cart{
+    text-decoration: none;
+    color: white;
+    background-color: #ff0000b4;
+    padding: 8px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+.call-to-order{
+    text-decoration: none;
+    color: white;
+    background-color: #ff0000b4;
+    padding: 8px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
 }
