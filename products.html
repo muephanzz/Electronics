@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/stylep.css">
 </head>
 <body>
-  <div id="product-details" class="product-details">
+<div id="product-details" class="product-details">
 <button class="call-to-order" onclick="callToOrder()">Call to Order</button>
 <script>
 const products = {
@@ -355,109 +355,289 @@ description: "Lipa mdogo mdogo",
     images: ["lapi/lapi10.jpg"] 
 },
 23: { 
-    name: "Wireless Over-Ear Headphones", 
+    name: "Wireless Over-Ear Headphones",
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Noise-cancelling, 20-hour battery life", 
     price: "Ksh 499", 
     images: ["head/head1.jpg"] 
 },
 24: { 
-    name: "Bluetooth In-Ear Earbuds", 
+    name: "Bluetooth In-Ear Earbuds",
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `,  
     description: "Compact design, sweat-resistant", 
     price: "Ksh 699", 
     images: ["head/head2.jpg"] 
 },
 25: { 
-    name: "Wired On-Ear Headphones", 
+    name: "Wired On-Ear Headphones",
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `,  
     description: "Deep bass, adjustable headband", 
     price: "Ksh 649", 
     images: ["head/head3.jpg"] 
 },
 26: { 
     name: "Wireless Sports Earbuds", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Secure fit, 15-hour battery life", 
     price: "Ksh 549", 
     images: ["head/head4.jpg"] 
 },
 27: { 
     name: "Basic Wired Earphones", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Lightweight, clear audio", 
     price: "Ksh 199", 
     images: ["head/head5.jpg"] 
 },
 28: { 
     name: "Studio Monitor Headphones", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "High fidelity, over-ear comfort", 
     price: "Ksh 499", 
     images: ["head/head6.jpg"] 
 },
 29: { 
     name: "Gaming Headset", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Noise isolation, built-in mic", 
     price: "Ksh 449", 
     images: ["head/head7.jpg"] 
 },
 30: { 
     name: "Foldable Over-Ear Headphones", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Compact design, immersive sound", 
     price: "Ksh 449", 
     images: ["head/head8.jpg"] 
 },
 31: { 
     name: "Noise-Cancelling Earbuds", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Ambient mode, portable case", 
     price: "Ksh 299", 
     images: ["head/head9.jpg"] 
 },
 32: { 
     name: "Wired Gaming Headset", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "RGB lighting, surround sound", 
     price: "Ksh 449", 
     images: ["head/head10.jpg"] 
 },
 33: { 
     name: "True Wireless Earbuds", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Bluetooth 5.0, touch controls", 
     price: "Ksh 699", 
     images: ["head/head11.jpg"] 
 },
 34: { 
     name: "Lightweight Wired Earphones", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Comfortable fit, noise-isolating", 
     price: "Ksh 199", 
     images: ["head/head12.jpg"] 
 },
 35: { 
     name: "On-Ear Wireless Headphones", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Foldable, 15-hour playtime", 
     price: "Ksh 449", 
     images: ["head/head13.jpg"] 
 },
 36: { 
     name: "Premium Wireless Earbuds", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Fast charging, IPX7 waterproof", 
     price: "Ksh 499", 
     images: ["head/head14.jpg"] 
 },
 37: { 
     name: "High-End Gaming Headset", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "7.1 surround sound, LED lights", 
     price: "Ksh 799", 
     images: ["head/head15.jpg"] 
 },
 38: { 
     name: "Portable Wireless Earphones", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Compact case, 12-hour battery", 
     price: "Ksh 699", 
     images: ["head/head16.jpg"] 
 },
 39: { 
     name: "Comfort-Fit Earbuds", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Dual driver, magnetic design", 
     price: "Ksh 699", 
     images: ["head/head17.jpg"] 
 },
 40: { 
     name: "Affordable Earphones", 
+    specifications: `
+    <table>
+        <tr><th>Features</th><tr>
+        <tr><td>24hrs battery life</td><tr>
+        <tr><td>Noise cancelling</td><tr>
+        <tr><td>Touch sensor volume control </td><tr>
+        <tr><td>Type C charger</td><tr>
+        <tr><td>Ultra clear, noise-free calls</td><tr>
+    </table>
+                `, 
     description: "Decent sound, lightweight design", 
     price: "Ksh 249", 
     images: ["head/head18.jpg"] 
@@ -1172,7 +1352,8 @@ if (productId && products[productId]) {
     <p1><strong>${product.price}</strong></p1>
     <p>${product.description}</p>
     <div class="product-specifications">${product.specifications}</div>
-    <button class="add-to-cart" onclick="addToCart()">Add To Cart</button>
+    <button class="add-to-cart" onclick="addToCart('${product.name}', '${product.price}', '${product.description}')">Add to Cart</button>
+    <button><a href="cart.html" id="viewCart">View Cart</a></button> 
     <button class="call-to-order" onclick="callToOrder()">Order Now</button>
     <div class="links">
       <a href="index.html">Back to Products</a>
@@ -1202,15 +1383,20 @@ function callToOrder() {
   window.location.href = "tel:+254798229783";
 }
 
-function addToCart() {
-      // Simulate adding a product to cart
-      const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-      cartItems.push("products.html?"); // Replace "Product 1" with dynamic product details if needed
-      localStorage.setItem("cart", JSON.stringify(cartItems));
-
-      // Alert the user
-      alert("Product added to cart!");
-    }
-    </script>
+// Function to update the cart count
+function updateCartCount() {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCountElement = document.getElementById("cart-count");
+  cartCountElement.textContent = cartItems.length;
+}
+// Function to add an item to the cart
+function addToCart(name, price, description) {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  cartItems.push({name, price, description});
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+  alert(`${name} added to cart.`);
+  updateCartCount();
+}
+</script>
 </body>
 </html>

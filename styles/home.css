@@ -10,6 +10,8 @@
     padding-bottom: 10px;
     padding-top: 94px;
     background-color: #110f0fc5;
+    display: flex;
+    flex-direction: center;
 }
 
 /* Slideshow container */
@@ -20,6 +22,8 @@
 
 /* Slideshow images */
 .slide {
+    display: flex;
+    flex-direction: center;
     position: absolute;
     width: 100%;
     height: 130px;

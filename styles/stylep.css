@@ -105,23 +105,28 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
-.add-to-cart{
+.add-to-cart, .call-to-order, #viewCart{
     text-decoration: none;
     color: white;
     background-color: #ff0000b4;
-    padding: 8px 8px;
+    padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.8rem;
     transition: background-color 0.3s ease;
 }
-.call-to-order{
+
+.back-link{
+    margin: 0px 5px 0px 5px;
     text-decoration: none;
     color: white;
-    background-color: #ff0000b4;
-    padding: 8px 8px;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #007bff;
+    padding: 6px 2px;
+    border-radius: 5px;
     font-size: 0.8rem;
     transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+background-color: #0056b3;
 }

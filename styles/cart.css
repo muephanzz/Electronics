@@ -1,0 +1,36 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 25px;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+ul li a, .remove-from-cart{
+    width: 22%;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #f71e1e;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+}
+
+ul li a:hover {
+background-color: #fc7b7b;
+}
+
+.remove-from-cart:hover {
+    background-color: #fc7b7b;
+}

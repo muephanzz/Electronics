@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products added to cart</title>
+  <link rel="stylesheet" href="styles/cart.css">
+  </head>
+<header></header>
+<body>
+  <div id="cart-container"></div>
+  <div class="back-link">
+    <ul>
+        <li>
+          <a href="index.html">Back to Products</a>  
+        </li>
+      </ul>
+    </div> 
+
+    <script>
+   // Function to update the cart count
+function updateCartCount() {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCountElement = document.getElementById("cart-count");
+
+  // Update the count text
+  cartCountElement.textContent = cartItems.length;
+
+  // Show or hide the count circle based on cart contents
+  cartCountElement.style.display = cartItems.length > 0 ? "block" : "none";
+}
+
+// Function to display cart items
+function displayCartItems() {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartContainer = document.getElementById("cart-container");
+
+  if (cartItems.length === 0) {
+    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    return;
+  }
+
+  cartContainer.innerHTML = cartItems
+    .map(
+      (item, index) =>
+        `<div class="cart-item">
+          <h3>${item.name}</h3>
+          <p><strong>${item.price}</strong></p>
+          <p>${item.description}</p>
+          <button class="remove-from-cart" onclick="removeFromCart(${index})">Remove from Cart</button>
+        </div>`
+    )
+    .join("");
+}
+
+// Function to remove an item from the cart
+function removeFromCart(index) {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  cartItems.splice(index, 1); // Remove the item at the specified index
+  localStorage.setItem("cart", JSON.stringify(cartItems)); // Update localStorage
+  displayCartItems(); // Refresh the cart display
+  alert("Item removed from cart.");
+  updateCartCount(); // Update the cart count
+}
+
+// Initialize cart display and count on page load
+document.addEventListener("DOMContentLoaded", () => {
+  displayCartItems();
+  updateCartCount();
+});
+
+    </script>
+</body>
+</html>

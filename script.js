@@ -47,12 +47,3 @@ function filterCategory(category) {
     // Optionally hide the dropdown after selection
     toggleMenu();
 }
-
-    // Function to update cart from localStorage
-    function updateCart() {
-        const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-        document.getElementById("cart-container").textContent = cartItems.length;
-      }
-  
-      // Initialize cart
-      window.onload = updateCart;
