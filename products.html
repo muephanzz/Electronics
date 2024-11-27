@@ -8,7 +8,6 @@
 </head>
 <body>
 <div id="product-details" class="product-details">
-<button class="call-to-order" onclick="callToOrder()">Call to Order</button>
 <script>
 const products = {
 1: {
@@ -1333,7 +1332,6 @@ description: "Lipa mdogo mdogo",
     images: ["ent/ent17.jpg"] 
 },
 };
-
     // Get the product ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
@@ -1352,11 +1350,13 @@ if (productId && products[productId]) {
     <p1><strong>${product.price}</strong></p1>
     <p>${product.description}</p>
     <div class="product-specifications">${product.specifications}</div>
-    <button class="add-to-cart" onclick="addToCart('${product.name}', '${product.price}', '${product.description}')">Add to Cart</button>
-    <button><a href="cart.html" id="viewCart">View Cart</a></button> 
-    <button class="call-to-order" onclick="callToOrder()">Order Now</button>
-    <div class="links">
-      <a href="index.html">Back to Products</a>
+    <div class="button-container">
+        <button class="btn add-to-cart" onclick="addToCart('${product.name}', '${product.price}', '${product.description}', '${product.images}')">Add to Cart</button>
+        <button class="btn view-cart"><a href="cart.html" id="viewCart">View Cart</a></button>
+        <button class="btn call-to-order" onclick="callToOrder()">Order Now</button>
+    </div>
+    <div button-container2>
+        <button class="bt back-to-products"><a href="index.html">Back to Products</a></button>
     </div>
   `;
 
@@ -1380,7 +1380,7 @@ if (productId && products[productId]) {
 }
 
 function callToOrder() {
-  window.location.href = "tel:+254798229783";
+  window.location.href = "https://wa.me/+254798229783"
 }
 
 // Function to update the cart count
@@ -1390,9 +1390,9 @@ function updateCartCount() {
   cartCountElement.textContent = cartItems.length;
 }
 // Function to add an item to the cart
-function addToCart(name, price, description) {
+function addToCart(name, price, description, images) {
   const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-  cartItems.push({name, price, description});
+  cartItems.push({name, price, description, images});
   localStorage.setItem("cart", JSON.stringify(cartItems));
   alert(`${name} added to cart.`);
   updateCartCount();
