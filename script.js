@@ -30,20 +30,3 @@ function showNextSlide() {
     setInterval(showNextSlide, 3000);
     });
     
-
-// Toggle dropdown menu visibility
-function toggleMenu() {
-    const dropdown = document.getElementById('categories-dropdown');
-    dropdown.classList.toggle('hidden');
-}
-
-// Filter products by category
-function filterCategory(category) {
-    const products = document.querySelectorAll('.product');
-    products.forEach(product => {
-        product.style.display = product.getAttribute('data-category') === category ? 'block' : 'none';
-    });
-
-    // Optionally hide the dropdown after selection
-    toggleMenu();
-}

@@ -1,4 +1,4 @@
-.home-home {
+#home-home {
     position: relative;
     height: 100px; /* Adjust height as needed */
     overflow: hidden;
@@ -7,7 +7,6 @@
 }
 
 .home-section{
-    padding-bottom: 10px;
     padding-top: 94px;
     background-color: #110f0fc5;
     display: flex;

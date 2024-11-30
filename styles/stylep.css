@@ -112,6 +112,7 @@ th {
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
     text-align: center; /* Center text inside button */
 }
 
@@ -134,6 +135,7 @@ th {
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; 
     text-align: center; 
+    transition: background-color 0.3s ease;
 }
 .bt a {
     color: white;

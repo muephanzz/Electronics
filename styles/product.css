@@ -1,58 +1,58 @@
-/* Product List Section */
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Adjust column width */
-    gap: 10px;
-    padding: 10px;
+  padding: 40px;
+}
+
+.product a, a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+  .product:hover {
+    transform: scale(1.05);
   }
 
-/* General container styling */
-.products {
+#smartphones, #laptops, #headphones,
+#smart-home, #tv, #home-ent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust width as needed */
-  gap: 16px; /* Space between items */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 16px; 
   padding: 16px;
-  list-style: none; /* For lists if applicable */
+  list-style: none;
   margin: 0;
+  text-align: center; 
+  background: hsl(0, 33%, 96%); 
+  border-radius: 8px; 
 }
 
-/* Individual product styling */
-.products {
-  border: 1px solid #ddd; /* Optional */
-  padding: 8px; /* Optional */
-  text-align: center; /* Adjust as needed */
-  background: #f9f9f9; /* Optional */
-  border-radius: 8px; /* Optional */
-}
-
-/* Two columns for small screens (phones) */
+/* Two columns for phones */
 @media (min-width: 480px) {
   .product-container {
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products {
+    padding: 10px;
   }
 }
 
-/* Larger screens (e.g., tablets and desktops) */
+/* Larger screen */
 @media (min-width: 768px) {
   .product-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for larger screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  }
+  .products {
+    padding: 40px;
   }
 }
-  
-  .product-image img {
+
+.product-image img {
     object-fit: contain;
     max-height: 200px;
     width: 100%;
     height: auto;
     border-radius: 2px;
-    transition: transform 0.3s ease;
-  }
-
-.product-image img:hover {
-    transform: scale(1.05);
 }
 
-  .info-box {
+.info-box {
     flex-grow: 0;
     display: flex;
     flex-direction: column;
@@ -75,19 +75,4 @@
     color: #fa1717;
     font-weight: bold;
     margin: 2px 0;
-  }
-  
-  .details-link {
-    margin: 0px 5px 0px 5px;
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 6px 2px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .details-link:hover {
-    background-color: #0056b3;
   }
