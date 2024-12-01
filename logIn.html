@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ephantronics - Login</title>
+    <link rel="stylesheet" href="styles/logIn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Welcome to Ephantronics</h1>
+            <p>Log in to explore the latest electronics</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn">Log In</button>
+                </div>
+                <p class="forgot-password">
+                    <a href="#" id="resetPassword">Forgot Password?</a>
+                </p>
+                <p class="create-account">
+                    Don't have an account? <a href="#" id="createAccount">Create Account</a>
+                </p>
+                <a href="index.html"><p>Back to Products</p><a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal" id="forgotPasswordModal">
+        <div class="modal-content">
+            <span class="close" id="closeForgotPassword">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="forgotPasswordForm">
+                <div class="input-group">
+                    <label for="resetEmail">Email</label>
+                    <input type="email" id="resetEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn">Send Reset Link</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Account Modal -->
+    <div class="modal" id="createAccountModal">
+        <div class="modal-content">
+            <span class="close" id="closeCreateAccount">&times;</span>
+            <h2>Create Account</h2>
+            <form id="createAccountForm">
+                <div class="input-group">
+                    <label for="newEmail">Email</label>
+                    <input type="email" id="newEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" id="newPassword" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+// Modal elements
+const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+const createAccountModal = document.getElementById('createAccountModal');
+const resetPasswordLink = document.getElementById('resetPassword');
+const createAccountLink = document.getElementById('createAccount');
+const closeForgotPassword = document.getElementById('closeForgotPassword');
+const closeCreateAccount = document.getElementById('closeCreateAccount');
+
+// Open Forgot Password Modal
+resetPasswordLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    forgotPasswordModal.style.display = 'flex';
+});
+
+// Open Create Account Modal
+createAccountLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    createAccountModal.style.display = 'flex';
+});
+
+// Close Forgot Password Modal
+closeForgotPassword.addEventListener('click', () => {
+    forgotPasswordModal.style.display = 'none';
+});
+
+// Close Create Account Modal
+closeCreateAccount.addEventListener('click', () => {
+    createAccountModal.style.display = 'none';
+});
+
+// Close modals when clicking outside modal content
+window.addEventListener('click', (e) => {
+    if (e.target === forgotPasswordModal) {
+        forgotPasswordModal.style.display = 'none';
+    }
+    if (e.target === createAccountModal) {
+        createAccountModal.style.display = 'none';
+    }
+});
+    </script>
+</body>
+</html>

@@ -1,36 +1,47 @@
 .products {
   padding: 40px;
 }
-
-.product a, a {
+.product {
+  border: 6px solid #9605051c;
+  border-radius: 10px;
+}
+.product a, a{
   text-decoration: none;
   transition: transform 0.3s ease;
 }
 
   .product:hover {
     transform: scale(1.05);
-  }
+}
 
 #smartphones, #laptops, #headphones,
 #smart-home, #tv, #home-ent {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-  gap: 16px; 
-  padding: 16px;
-  list-style: none;
-  margin: 0;
-  text-align: center; 
-  background: hsl(0, 33%, 96%); 
-  border-radius: 8px; 
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+	gap: 16px; 
+	padding: 16px;
+	list-style: none;
+	text-align: center; 
+	background: hsl(0, 33%, 96%); 
+	border-radius: 8px; 
+	margin-bottom: 25px;
+	border: 20px solid rgb(255, 87, 180);
+	border-radius: 6px;
+	padding: 10px 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: antiquewhite;
 }
 
 /* Two columns for phones */
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .product-container {
     grid-template-columns: repeat(2, 1fr);
   }
   .products {
-    padding: 10px;
+    margin-top: 35px;
+    padding: 0px;
   }
 }
 

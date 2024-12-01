@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="styles/cart.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <span class="cart-icon">Items in the Cart <span id="cart-count">0</span></span>
-        </nav>
-    </header>
+<header></header>
 
     <main>
         <h1>Your Shopping Cart</h1>
@@ -26,62 +22,7 @@
     <footer>
         <p>&copy; 2024 Ephantus Electronic Products and Services.. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
-
-    <script>
-        // Function to update the cart count
-        function updateCartCount() {
-            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            const cartCountElement = document.getElementById("cart-count");
-
-            cartCountElement.textContent = cartItems.length;
-
-            cartCountElement.style.display = cartItems.length > 0 ? "inline-block" : "none";
-        }
-
-        // Function to display cart items
-        function displayCartItems() {
-            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            const cartContainer = document.getElementById("cart-container");
-
-            if (cartItems.length === 0) {
-                cartContainer.innerHTML = "<p class='empty-cart'>Hey! Your cart is empty. Start adding items to it! <a href='index.html'>click here>></a></p>";
-                return;
-            }
-
-            cartContainer.innerHTML = cartItems
-                .map(
-                    (item, index) =>
-                        `<div class="cart-item">
-                            <div class="item-details">
-                                <img src="${item.images}">
-                                <h3>${item.name}</h3>
-                                <p class="price"><strong>${item.price}</strong></p>
-                                <p>${item.description}</p>
-                            </div>
-                            <button class="btn remove-from-cart" onclick="removeFromCart(${index})">Remove</button>
-                        </div>`
-                )
-                .join("");
-        }
-
-        // Function to remove an item from the cart
-        function removeFromCart(index) {
-            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            cartItems.splice(index, 1); 
-            localStorage.setItem("cart", JSON.stringify(cartItems)); 
-            displayCartItems(); 
-            updateCartCount(); 
-        }
-
-        // Initialize cart display and count on page load
-        document.addEventListener("DOMContentLoaded", () => {
-            displayCartItems();
-            updateCartCount();
-        });
-
-        function callToOrder() {
-        window.location.href = "https://wa.me/+254798229783"
-        }
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

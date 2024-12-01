@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/product.css">
 </head>
 <body>
+    
     <!-- Header Section -->
 <header class="header">
     <div id="search-container" class="search-bar">
@@ -21,31 +22,38 @@
 
     <div class="header-icons">
         <div class="cart">
+            <div id="cart-container" style="display: none;"></div>
             <a class="View Cart" href="cart.html">
-                <button id="cart-button">🛒</button><a>
-            <span class="cart-count">0</span>
+                <button id="cart-button" title="cart">🛒</button><a>
+            <span id="cart-count">0</span>
         </div>
         <div class="login">
-            <button id="login-button" aria-label="Log In">👤</button>
+            <a href="logIn.html"><button id="login-button" title="Log In">👤</button></a>
         </div>
     </div>  
 
-    <div class="menu">
-        <nav class="menu-icon" id="menu-box">
-            <a href="#home">Home</a>
-            <a href="#product-id">Products</a>
-                <div>
-                    <a href="#smartphones">Smartphones</a>
-                    <a href="#laptops">Laptops</a>
-                    <a href="#headphones">Headphones and Airponds</a>
-                    <a href="#smart-home">Smart Home Devices</a>
-                    <a href="#tv">Televisions</a>
-                    <a href="#home-ent">Home Entertainments</a>
-                </div>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contacts</a>
-        </nav>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+
+    <!-- Menu Box -->
+    <div id="menu-box">
+        <a href="#home">Home</a>
+        <div>
+            <a class="category" href="#smartphones">Smartphones</a>
+            <a class="category" href="#laptops">Laptops</a>
+            <a class="category" href="#headphones">Headphones and Airpods</a>
+            <a class="category" href="#smart-home">Smart Home Devices</a>
+            <a class="category" href="#tv">Televisions</a>
+            <a class="category" href="#home-ent">Home Entertainment</a>
+        </div>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contacts</a>
+    </div>
+
 </header>
 
     <!-- Home section -->
@@ -55,13 +63,14 @@
             <img class="slide" src="handle/home2.jpg" alt="Slideshow Image">
             <img class="slide" src="handle/home3.jpg" alt="Slideshow Image">
             <img class="slide" src="handle/home4.jpg" alt="Slideshow Image">
-            <img class="slide" src="handle/home5.gif" alt="Slideshow Image">
+            <p class="slide">Welcome To Our Electronic Store</p>
     </div>
 </section>
 
 <main id="product-id" class="products">
+    <div id="smartphones"><h6>Smartphones</h6></div>
     <!-- This is Smartphones Section --> 
-<section id="smartphones" data-category="smartphones">
+<section id="smartphones">
     <div class="product"><a href="products.html?id=1">
         <div class="product-image"><img src="smartphones/oppoA18.jpg"></div>
         <div class="info-box">
@@ -157,11 +166,12 @@
             <p>4GB RAM, 64GB Storage</p>
             <div class="price">Ksh 3,099</div>
         </div>
-    </a></div> 
+    </a></div>
 </section>      
              
     <!-- This is laptops category --> 
-<section id="laptops" data-category="laptops">
+    <div id="laptops"><h6>Laptops</h6></div>
+<section id="laptops">
     <div class="product"><a href="products.html?id=13">
         <div class="product-image"><img src="lapi/lapi1.jpg"></div>
         <div class="info-box">
@@ -245,7 +255,8 @@
 </section>
 
 <!-- This is headphones and EarPods category -->
-<section id="headphones" data-category="headphones">
+    <div id="headphones"><h6>Headphones and Earponds</h6></div>
+<section id="headphones">
     <div class="product"><a href="products.html?id=23">
         <div class="product-image"><img src="head/head1.jpg"></div>
         <div class="info-box">
@@ -392,7 +403,8 @@
     </a></div> 
 </section>
     <!-- This is smart home devices category -->
-<section id="smart-home" data-category="smart-home">
+    <div id="smart-home"><h6>Smart Home Devices</h6></div>
+<section id="smart-home">
     <div class="product"><a href="products.html?id=41"> 
         <div class="product-image"><img src="smart/smart1.jpg"></div>
         <div class="info-box">
@@ -539,7 +551,8 @@
     </a></div> 
 </section>
     <!-- This is television category -->
-<section id="tv" data-category="tv">
+    <div id="tv"><h6>Televisions</h6></div>
+<section id="tv">
     <div class="product"><a href="products.html?id=59">
         <div class="product-image"><img src="tv/tv1.jpg"></div>
         <div class="info-box">
@@ -702,7 +715,8 @@
     </a></div> 
 </section>
     <!-- This is home-entertainment category -->
-<section id="home-ent" data-category="home-ent">
+    <div id="home-ent"><h6>Home Entertainment</h6></div>
+<section id="home-ent">
     <div class="product"><a href="products.html?id=79">
         <div class="product-image"><img src="ent/ent1.jpg"></div>
         <div class="info-box">

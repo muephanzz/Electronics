@@ -1383,12 +1383,7 @@ function callToOrder() {
   window.location.href = "https://wa.me/+254798229783"
 }
 
-// Function to update the cart count
-function updateCartCount() {
-  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-  const cartCountElement = document.getElementById("cart-count");
-  cartCountElement.textContent = cartItems.length;
-}
+
 // Function to add an item to the cart
 function addToCart(name, price, description, images) {
   const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
