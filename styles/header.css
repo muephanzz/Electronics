@@ -18,14 +18,14 @@
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #444;
+    border-bottom: 1px solid #444;
 }
 
 /* Search Bar */
 .search-bar {
     display: flex;
     flex: 1;
-    margin: 0 20px;
+    margin: 0 0 0 20px;
 }
 
 .search-bar input {
@@ -84,7 +84,7 @@
 #menu-box {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: left;
     padding: 10px;
     cursor: pointer;
     text-decoration: none;
@@ -92,15 +92,21 @@
     position: fixed;
     right: 40px;
     left: 40px;
-    top: 8%;
-    background-color: rgb(252, 42, 164);
+    top: 7%;
+    background-color: #1e1e2f;
+    border: 1px solid #444;
     transition: transform 0.3s ease-in-out;
 }
 
 #menu-box a {
-    color: white;
+    padding-left: 10px;
+    color: rgb(209, 208, 208);
     text-decoration: none;
     font-size: 1rem;
+}
+
+#menu-box a:hover {
+    color: brown;
 }
 
 .category {
@@ -116,7 +122,7 @@
     flex-direction: column;
     gap: 5px;
     position: fixed;
-    top: 15px;
+    top: 14px;
     left: 8px;
     cursor: pointer;
     z-index: 1000;
@@ -134,11 +140,15 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        right: 10px;
         top: 50px;
         width: 200px;
-        background-color: rgb(252, 42, 164);
+        background-color: rgb(19, 17, 17);
         border-radius: 5px;
+        left: 1px;
+    }
+
+    #menu-box a{
+        border: 1px solid rgba(31, 30, 30, 0.295);
     }
 
     #menu-box.open {
@@ -154,7 +164,7 @@
 }
 
 
-@media (max-width: px) {
+@media (max-width: 480px) {
     #menu-box {
         display: none;
         flex-direction: column;
@@ -162,7 +172,6 @@
         right: 10px;
         top: 50px;
         width: 200px;
-        background-color: rgb(252, 42, 164);
         border-radius: 5px;
     }
 }

@@ -1,44 +1,60 @@
 /* About Container Styling */
 .about-container {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border: 1px solid #ddd;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
-.about-container h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #333;
+#about {
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+ h2 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  color: #b1b1b1d2;
   text-align: center;
+  margin: 5px;
 }
 
 .about-container p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 0.8rem;
+  line-height: 1.4;
   padding: 6px;
-  color: #020000;
+  color: #ffffff80;
   text-align: left;
 }
 
-#about, #contact {
-  margin: 5px;
-  background-color: #f3d3d3;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
+.contacts{
+  display: inline;
 }
 
-#contact h2{
-  padding: 20px;
+.contacts img{
+  margin: 2px;
+  padding-left: 2px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
 
-#contact a{
-  padding: 2px;
+/* Two columns for phones */
+@media (max-width: 480px) {
+  #about {
+    margin-top: 35px;
+    padding: 0px;
+  }
+  .about-container {
+    display: flex;
+  }
 }
-#contact{
-padding: 15px;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-border: 1px solid #ddd;
+
+/* Larger screen */
+@media (max-width: 768px) {
+  #about {
+    padding: 10px;
+  }
+  .about-container {
+    display: flex;
+  }
 }
