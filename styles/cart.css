@@ -3,43 +3,35 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #ff98e0ab;
     color: #333;
 }
 
 header {
     position: fixed;
     width: 100%;
-    background-color: #252525;
-    padding: 1rem;
+    background-color: #252525e1;
     display: flex;
-    justify-content: space-between;
+    height: 50px;
+    justify-content: center;
     align-items: center;
     color: white;
 }
-
-.cart-icon {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    nav-right: 0px;  
+ 
+.header-text h1{
+    display: inline;
 }
+
 
 main {
-    padding: 1rem;
-    max-width: 1200px;
+    padding: 5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin: auto;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 4rem;
 }
 
 .cart-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     gap: 1.5rem;
 }
 
@@ -73,7 +65,7 @@ h1 {
 }
 
 .btn:hover {
-    background: #03fd03;
+    background: #fd0303a6;
 }
 
 .empty-cart {
@@ -86,16 +78,21 @@ h1 {
 }
 
 footer {
+    margin-top: 80%;
+    position: relative;
     background: #333;
-    color: white;
+    color: rgba(255, 255, 255, 0.603);
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 15rem;
+    padding: 0.05rem 0;
+    
 }
 
 footer a {
-    color: #f51919;
+    color: #f30202af;
     text-decoration: none;
+}
+footer a:hover {
+    color: #ff3f3fab;
 }
 
 .btn2 {
@@ -105,7 +102,7 @@ footer a {
     align-items: center; /* Align items vertically */
     margin: 2rem 0;
     padding: 0.4rem 0.8rem;
-    background-color: #ff4949; /* Button background color */
+    background: #ff1c1cf1;
     color: white; /* Text color */
     font-size: 1rem; /* Font size */
     border: none; /* Remove border */
@@ -116,7 +113,7 @@ footer a {
 }
 
 .btn2:hover {
-    background: #03fd03;
+    background-color: #ff4949d2;
 }
 .btn3 {
     display: flex; /* Use Flexbox for alignment */

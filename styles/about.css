@@ -7,7 +7,9 @@
 }
 
 #about {
-  background-color: rgba(0, 0, 0, 0.658);
+  border: 2px solid rgba(255, 255, 255, 0.075);
+  padding: 30px;
+  background: #333;
 }
 
  h2 {
@@ -22,7 +24,7 @@
   font-size: 0.8rem;
   line-height: 1.4;
   padding: 6px;
-  color: #ffffff80;
+  color: #faffdf80;
   text-align: left;
 }
 

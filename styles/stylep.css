@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ff98e0ab;
     color: #333;
 }
 
@@ -22,7 +22,7 @@ p {
 .product-details {
     max-width: 800px;
     margin: 2rem auto;
-    background: #fafafa;
+    background: #ffbfec07;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -83,7 +83,10 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #f2f2f2;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #585858bd;
+    font-weight: bold;
+    font-size: 18px;
 }
 /* Align buttons in a row */
 .button-container {
@@ -118,7 +121,7 @@ th {
 
 /* Hover effect for buttons */
 .btn:hover {
-    background-color: #41ff07; /* Darker shade on hover */
+    background-color: #ff0707d7; /* Darker shade on hover */
 }
 
 .btn a{

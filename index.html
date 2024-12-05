@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
     <title>Product Page</title>
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="styles/product.css">
 </head>
 <body>
-    
     <!-- Header Section -->
 <header class="header">
     <div id="search-container" class="search-bar">
@@ -24,7 +23,7 @@
         <div class="cart">
             <div id="cart-container" style="display: none;"></div>
             <a class="View Cart" href="cart.html">
-                <button id="cart-button" title="cart">🛒</button><a>
+                <button id="cart-button" onclick="document.innerHTML(cart1)">🛒</button><a>
             <span id="cart-count">0</span>
         </div>
         <div class="login">
@@ -77,6 +76,7 @@
             <h3>Oppo A18</h3>
             <p>4GB RAM, 64GB Storage</p>
             <div class="price">Ksh 2,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=2">
@@ -85,6 +85,7 @@
             <h3>Oppo A3x</h3>
             <p>4GB RAM, 64GB Storage</p>
             <div class="price">Ksh 2,099</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (7)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=3">
@@ -93,6 +94,7 @@
             <h3>Redmi 13c</h3>
             <p>4GB RAM, 128GB Storage</p>
             <div class="price">Ksh 18,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (43)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=4">
@@ -101,6 +103,7 @@
             <h3>Redmi 14c</h3>
             <p>4GB RAM, 128GB Storage</p>
             <div class="price">Ksh 12,799</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (34)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=5">
@@ -109,6 +112,7 @@
             <h3>Samsung A05</h3>
             <p>4GB RAM, 64GB Storage</p>
             <div class="price">Ksh 3,099</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (32)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=6">
@@ -117,6 +121,7 @@
             <h3>Samsung A05</h3>
             <p>4GB RAM, 64GB Storage</p>
             <div class="price">Ksh 3,099</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (105)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=7">
@@ -125,6 +130,7 @@
             <h3>Samsung A15</h3>
             <p>4GB RAM, 128GB Storage</p>
             <div class="price">Ksh 18,099</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (74)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=8">
@@ -133,6 +139,7 @@
             <h3>Samsung A25</h3>
             <p>4GB RAM, 256GB Storage</p>
             <div class="price">Ksh 21,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (65)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=9">
@@ -141,6 +148,7 @@
             <h3>vivo Y03</h3>
             <p>4GB RAM, 64GB Storage</p>
             <div class="price">Ksh 2,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (47)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=10">
@@ -149,6 +157,7 @@
             <h3>Mkopa X2</h3>
             <p>4GB RAM, 128GB Storage</p>
             <div class="price">Ksh 3,299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (75)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=11">
@@ -157,6 +166,7 @@
             <h3>Mkopa X20</h3>
             <p>6GB RAM, 256GB Storage</p>
             <div class="price">Ksh 4,199</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (47)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=12">
@@ -165,6 +175,7 @@
             <h3>Samsung A05</h3>
             <p>4GB RAM, 64GB Storage</p>
             <div class="price">Ksh 3,099</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (41)</p>
         </div>
     </a></div>
 </section>      
@@ -178,6 +189,7 @@
             <h3>Lenovo IdeaPad</h3>
             <p>4GB RAM, 256GB SSD</p>
             <div class="price">Ksh 21,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=14">
@@ -186,6 +198,7 @@
             <h3>HP Pavilion</h3>
             <p>8GB RAM, 500GB HDD</p>
             <div class="price">Ksh 23,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=15">
@@ -194,6 +207,7 @@
             <h3>Dell Inspiron</h3>
             <p>4GB RAM, 500GB HDD</p>
             <div class="price">Ksh 20,399</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=16">
@@ -202,6 +216,7 @@
             <h3>Acer Aspire</h3>
             <p>8GB RAM, 256GB SSD</p>
             <div class="price">Ksh 19,899</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=17">
@@ -210,6 +225,7 @@
             <h3>Asus VivoBook</h3>
             <p>16GB RAM, 512GB SSD</p>
             <div class="price">Ksh 26,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=18">
@@ -218,6 +234,7 @@
             <h3>HP ProBook</h3>
             <p>8GB RAM, 1TB HDD</p>
             <div class="price">Ksh 19,899</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (23)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=19">
@@ -226,6 +243,7 @@
             <h3>Lenovo ThinkPad</h3>
             <p>4GB RAM, 256GB SSD</p>
             <div class="price">Ksh 22,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (22)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=20">
@@ -234,6 +252,7 @@
             <h3>HP EliteBook</h3>
             <p>4GB RAM, 500GB HDD</p>
             <div class="price">Ksh 17,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (23)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=21">
@@ -242,6 +261,7 @@
             <h3>Asus ZenBook</h3>
             <p>8GB RAM, 256GB SSD</p>
             <div class="price">Ksh 22,299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (102)</p>
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=22">
@@ -250,6 +270,7 @@
             <h3>MacBook Air</h3>
             <p>16GB RAM, 1TB SSD</p>
             <div class="price">Ksh 23,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (12)</p>
         </div>
     </a></div>  
 </section>
@@ -261,144 +282,162 @@
         <div class="product-image"><img src="head/head1.jpg"></div>
         <div class="info-box">
             <h3>Headphones</h3>
-            <p>Noise-cancelling</p>
+            <p>Noise-cancelling...</p>
             <div class="price">Ksh 499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (82)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=24">
         <div class="product-image"><img src="head/head2.jpg"></div>
         <div class="info-box">
             <h3>In-Ear Earbuds</h3>
-            <p>Compact design</p>
+            <p>Compact design....</p>
             <div class="price">Ksh 699</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (72)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=25">
         <div class="product-image"><img src="head/head3.jpg"></div>
         <div class="info-box">
-            <h3>Wired On-Ear Headphones</h3>
-            <p>Deep bass, adjustable headband</p>
+            <h3>Wired On-Ear...</h3>
+            <p>Deep bass, adjustable....</p>
             <div class="price">Ksh 649</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (402)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=26">
         <div class="product-image"><img src="head/head4.jpg"></div>
         <div class="info-box">
-            <h3>Wireless Sports Earbuds</h3>
-            <p>Secure fit, 15-hour battery life, Noise cancelling</p>
+            <h3>Wireless Sports..</h3>
+            <p>Secure fit, 15-hour....</p>
             <div class="price">Ksh 549</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (52)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=27">
         <div class="product-image"><img src="head/head5.jpg"></div>
         <div class="info-box">
-            <h3>Basic Wired Earphones</h3>
-            <p>Lightweight, clear audio, Deep bass</p>
+            <h3>Basic Wire....</h3>
+            <p>Lightweight, cle....</p>
             <div class="price">Ksh 199</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (44)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=28">
         <div class="product-image"><img src="head/head6.jpg"></div>
         <div class="info-box">
-            <h3>Studio Monitor Headphones</h3>
-            <p>High fidelity, over-ear comfort, Bass boost</p>
+            <h3>Studio Monito....</h3>
+            <p>High fidelity, over-ea....</p>
             <div class="price">Ksh 499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=29">
         <div class="product-image"><img src="head/head7.jpg"></div>
         <div class="info-box">
-            <h3>Gaming Headset Headphones</h3>
-            <p>Noise isolation, built-in mic, Heavy bass</p>
+            <h3>Gaming Headset...</h3>
+            <p>Noise isolation...</p>
             <div class="price">Ksh 449</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (94)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=30">
         <div class="product-image"><img src="head/head8.jpg"></div>
         <div class="info-box">
-            <h3>Foldable Over-Ear Headphones</h3>
-            <p>Compact design, immersive sound</p>
+            <h3>Foldable Over....</h3>
+            <p>Compact design,...</p>
             <div class="price">Ksh 449</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (43)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=31">
         <div class="product-image"><img src="head/head9.jpg"></div>
         <div class="info-box">
-            <h3>Noise-Cancelling Earbuds</h3>
-            <p>Ambient mode, portable case, Compact design</p>
+            <h3>Noise-Cancell....</h3>
+            <p>Ambient mode, porta....</p>
             <div class="price">Ksh 299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (532)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=32">
         <div class="product-image"><img src="head/head10.jpg"></div>
         <div class="info-box">
-            <h3>Wired Gaming Headset</h3>
-            <p>15-hrs battery life, RGB lighting, surround sound</p>
+            <h3>Wired Gaming ....</h3>
+            <p>15-hrs battery l....</p>
             <div class="price">Ksh 449</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (452)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=33">
         <div class="product-image"><img src="head/head11.jpg"></div>
         <div class="info-box">
-            <h3>True Wireless Earbuds</h3>
-            <p>Bluetooth 5.0, touch controls</p>
+            <h3>True Wireless...</h3>
+            <p>Bluetooth 5.0, ...</p>
             <div class="price">Ksh 699</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (953)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=34">
         <div class="product-image"><img src="head/head12.jpg"></div>
         <div class="info-box">
-            <h3>Lightweight Wired Earphones</h3>
-            <p>Comfortable fit, noise-isolating</p>
+            <h3>Lightweight Wired...</h3>
+            <p>Comfortable fit...</p>
             <div class="price">Ksh 199</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=35">
         <div class="product-image"><img src="head/head13.jpg"></div>
         <div class="info-box">
-            <h3>On-Ear Wireless Headphones</h3>
-            <p>Foldable, 15-hour playtime</p>
+            <h3>On-Ear Wireless...</h3>
+            <p>Foldable, 15-hour...</p>
             <div class="price">Ksh 449</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (102)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=36">
         <div class="product-image"><img src="head/head14.jpg"></div>
         <div class="info-box">
-            <h3>Premium Wireless Earbuds</h3>
+            <h3>Premium Wireless....</h3>
             <p>Fast charging, IPX7</p>
             <div class="price">Ksh 499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (921)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=37">
         <div class="product-image"><img src="head/head15.jpg"></div>
         <div class="info-box">
-            <h3>High-End Gaming Headset</h3>
+            <h3>High-End Gaming....</h3>
             <p>7.1 surround sound, LED</p>
             <div class="price">Ksh 799</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (453)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=38">
         <div class="product-image"><img src="head/head16.jpg"></div>
         <div class="info-box">
-            <h3>Portable Wireless Earphones</h3>
+            <h3>Portable Wireless...</h3>
             <p>Compact case, 12-hour</p>
             <div class="price">Ksh 699</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (392)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=39">
         <div class="product-image"><img src="head/head17.jpg"></div>
         <div class="info-box">
-            <h3>Comfort-Fit Earbuds High-End</h3>
-            <p>Dual driver, magnetic design</p>
+            <h3>Comfort-Fit...</h3>
+            <p>Dual driver, magnetic...</p>
             <div class="price">Ksh 699</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (902)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=40">
         <div class="product-image"><img src="head/head18.jpg"></div>
         <div class="info-box">
-            <h3>Affordable Earphones Portable</h3>
-            <p>Decent sound, lightweight</p>
+            <h3>Affordable Earphones..</h3>
+            <p>Decent sound, lightweight...</p>
             <div class="price">Ksh 249</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (654)</p>
         </div>
     </a></div> 
 </section>
@@ -409,128 +448,144 @@
         <div class="product-image"><img src="smart/smart1.jpg"></div>
         <div class="info-box">
             <h3>Smart LED Bulb</h3>
-            <p>Adjustable brightness, Wi-Fi controlled</p>
-            <div class="price">Ksh 899</div>            
+            <p>Adjustable brightness....</p>
+            <div class="price">Ksh 899</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (94)</p>            
         </div>                
     </a></div> 
     <div class="product"><a href="products.html?id=42"> 
         <div class="product-image"><img src="smart/smart2.jpg"></div>
         <div class="info-box">
             <h3>Smart Plug</h3>
-            <p>Energy monitoring, remote control</p>
+            <p>Energy monitoring...</p>
             <div class="price">Ksh 699</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (2)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=43"> 
         <div class="product-image"><img src="smart/smart3.jpg"></div>
         <div class="info-box">
             <h3>Smart Thermostat</h3>
-            <p>Temperature control, voice-activated</p>
+            <p>Temperature control....</p>
             <div class="price">Ksh 3,299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (4)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=44"> 
         <div class="product-image"><img src="smart/smart4.jpg"></div>
         <div class="info-box">
             <h3>Smart Door Lock</h3>
-            <p>Keyless entry, app-controlled, using phone</p>
+            <p>Keyless entry, app-co...</p>
             <div class="price">Ksh 4,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (42)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=45"> 
         <div class="product-image"><img src="smart/smart5.jpg"></div>
         <div class="info-box">
             <h3>Security Camera</h3>
-            <p>Smart security, 1080p HD, night vision</p>
+            <p>Smart security....</p>
             <div class="price">Ksh 2,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=46"> 
         <div class="product-image"><img src="smart/smart6.jpg"></div>
         <div class="info-box">
             <h3>Smoke Detector</h3>
-            <p>Wi-Fi connected, real-time alerts</p>
+            <p>Wi-Fi connected....</p>
             <div class="price">Ksh 1,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (0)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=47"> 
         <div class="product-image"><img src="smart/smart7.jpg"></div>
         <div class="info-box">
             <h3>Smart Light Strip</h3>
-            <p>RGB color changing, app-controlled</p>
+            <p>RGB color changing...</p>
             <div class="price">Ksh 1,199</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (2)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=48"> 
         <div class="product-image"><img src="smart/smart8.jpg"></div>
         <div class="info-box">
             <h3>Smart Plug Socket</h3>
-            <p>Control from anywhere, surge protection</p>
+            <p>Control from anywhere...</p>
             <div class="price">Ksh 999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (12)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=49"> 
         <div class="product-image"><img src="smart/smart9.jpg"></div>
         <div class="info-box">
             <h3>Smart Doorbell</h3>
-            <p>1080p camera, motion detection</p>
+            <p>1080p camera, motion...</p>
             <div class="price">Ksh 2,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=50"> 
         <div class="product-image"><img src="smart/smart10.jpg"></div>
         <div class="info-box">
             <h3>Vacuum Cleaner</h3>
-            <p>App control, automatic charging</p>
+            <p>App control, automatic...</p>
             <div class="price">Ksh 9,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (3)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=51"> 
         <div class="product-image"><img src="smart/smart11.jpg"></div>
         <div class="info-box">
             <h3>Smart Air Purifier</h3>
-            <p>HEPA filter, app-controlled, using phone</p>
+            <p>HEPA filter, app....</p>
             <div class="price">Ksh 6,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (2)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=52"> 
         <div class="product-image"><img src="smart/smart12.jpg"></div>
         <div class="info-box">
             <h3>Garden Irrigation</h3>
-            <p>Wi-Fi controlled, water-saving, smart irrigation</p>
+            <p>Wi-Fi controlled, wa...</p>
             <div class="price">Ksh 2,199</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (0)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=53"> 
         <div class="product-image"><img src="smart/smart13.jpg"></div>
         <div class="info-box">
             <h3>Smart Ceiling Fan</h3>
-            <p>App-controlled, energy efficient</p>
+            <p>App-controlled....</p>
             <div class="price">Ksh 5,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (1)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=54"> 
         <div class="product-image"><img src="smart/smart14.jpg"></div>
         <div class="info-box">
             <h3>Smart Mirror</h3>
-            <p>Touchscreen, voice assistant, smart mirror</p>
+            <p>Touchscreen, voice....</p>
             <div class="price">Ksh 8,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (2)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=55"> 
         <div class="product-image"><img src="smart/smart15.jpg"></div>
         <div class="info-box">
             <h3>Water Leak Sensor</h3>
-            <p>Wi-Fi connected, real-time alerts</p>
+            <p>Wi-Fi connected...</p>
             <div class="price">Ksh 1,099</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (52)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=56"> 
         <div class="product-image"><img src="smart/smart16.jpg"></div>
         <div class="info-box">
             <h3>Bluetooth Speaker</h3>
-            <p>Portable, voice assistant integration</p>
+            <p>Portable, voice....</p>
             <div class="price">Ksh 2,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (72)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=57"> 
@@ -539,6 +594,7 @@
             <h3>Smart Security</h3>
             <p>All-in-one, 4 cameras</p>
             <div class="price">Ksh 19,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (2)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=58"> 
@@ -547,6 +603,7 @@
             <h3>Smart Light Bulb</h3>
             <p>3 bulbs, color-changing</p>
             <div class="price">Ksh 2,299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>
         </div>
     </a></div> 
 </section>
@@ -559,6 +616,7 @@
             <h3>Samsung 32" LED</h3>
             <p>HD Resolution, Smart TV</p>
             <div class="price">Ksh 23,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (175)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=60">
@@ -567,6 +625,7 @@
             <h3>LG 43" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 21,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (63)</p>
         </div>
     </a></div>    
     <div class="product"><a href="products.html?id=61">
@@ -575,6 +634,7 @@
             <h3>Sony 40" Full HD TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 18,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (24)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=62">
@@ -583,6 +643,7 @@
             <h3>Vizio 43" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 14,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (24)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=63">
@@ -591,6 +652,7 @@
             <h3>TCL 32" LED TV</h3>
             <p>HD Resolution, Smart TV</p>
             <div class="price">Ksh 10,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (43)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=64">
@@ -599,6 +661,7 @@
             <h3>Hisense 40" Full HD</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 13,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (64)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=65">
@@ -607,6 +670,7 @@
             <h3>Panasonic 43" LED</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 22,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (14)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=66">
@@ -615,6 +679,7 @@
             <h3>Samsung 40" LED</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 19,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (43)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=67">
@@ -623,6 +688,7 @@
             <h3>LG 43" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 21,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (942)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=68">
@@ -631,6 +697,7 @@
             <h3>Philips 40" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 16,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (242)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=69">
@@ -639,6 +706,7 @@
             <h3>Sharp 32" LED TV</h3>
             <p>HD Resolution, Smart TV</p>
             <div class="price">Ksh 12,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (13)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=70">
@@ -647,6 +715,7 @@
             <h3>Vizio 40" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 14,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (253)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=71">
@@ -655,6 +724,7 @@
             <h3>Samsung 43" LED</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 20,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (72)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=72">
@@ -663,6 +733,7 @@
             <h3>LG 42" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 17,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (467)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=73">
@@ -671,6 +742,7 @@
             <h3>TCL 32" LED TV</h3>
             <p>HD Resolution, Smart TV</p>
             <div class="price">Ksh 9,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (24)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=74">
@@ -679,6 +751,7 @@
             <h3>Sony 43" Full HD TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 19,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (245)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=75">
@@ -687,6 +760,7 @@
             <h3>LG 40" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 15,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (453)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=76">
@@ -695,6 +769,7 @@
             <h3>Vizio 42" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 16,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (452)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=77">
@@ -703,6 +778,7 @@
             <h3>LG 40" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 14,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (56)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=78">
@@ -711,6 +787,7 @@
             <h3>Hisense 43" LED TV</h3>
             <p>Full HD, Smart TV</p>
             <div class="price">Ksh 20,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (62)</p>
         </div>
     </a></div> 
 </section>
@@ -720,136 +797,154 @@
     <div class="product"><a href="products.html?id=79">
         <div class="product-image"><img src="ent/ent1.jpg"></div>
         <div class="info-box">
-            <h3>Portable Bluetooth</h3>
-            <p>10W Power Output, Wireless</p>
+            <h3>Portable Bluetooth..</h3>
+            <p>10W Power Output...</p>
             <div class="price">Ksh 3,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (92)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=80">
         <div class="product-image"><img src="ent/ent2.jpg"></div>
         <div class="info-box">
-            <h3>Mini Amplifier</h3>
-            <p>50W Output, Wired</p>
+            <h3>Mini Amplifier..</h3>
+            <p>50W Output, Wired..</p>
             <div class="price">Ksh 4,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (56)</p>
         </div>
     </a></div>    
     <div class="product"><a href="products.html?id=81">
         <div class="product-image"><img src="ent/ent3.jpg"></div>
         <div class="info-box">
-            <h3>Bluetooth Party Woofer</h3>
-            <p>100W Power Output, LED Lights</p>
+            <h3>Bluetooth Part...</h3>
+            <p>100W Power Output...</p>
+            <div class="price">Ksh 4,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>
         </div>
     </a></div>  
     <div class="product"><a href="products.html?id=82">
         <div class="product-image"><img src="ent/ent4.jpg"></div>
         <div class="info-box">
-            <h3>Wireless Home Theater System</h3>
-            <p>200W Power Output, 5.1 Channel</p>
+            <h3>Wireless Home...</h3>
+            <p>200W Power Output...</p>
             <div class="price">Ksh 11,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (2)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=83">
         <div class="product-image"><img src="ent/ent5.jpg"></div>
         <div class="info-box">
-            <h3>Portable Stereo Woofer</h3>
-            <p>50W Power Output, Bluetooth Connectivity</p>
+            <h3>Portable Stereo...</h3>
+            <p>50W Power Output...</p>
             <div class="price">Ksh 5,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (63)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=84">
         <div class="product-image"><img src="ent/ent6.jpg"></div>
         <div class="info-box">
-            <h3>Compact Amplifier for Car Audio</h3>
-            <p>80W Output, Wired Connectivity</p>
+            <h3>Compact Amplifier...</h3>
+            <p>80W Output, Wi..</p>
             <div class="price">Ksh 4,299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (70)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=85">
         <div class="product-image"><img src="ent/ent7.jpg"></div>
         <div class="info-box">
-            <h3>4-Channel Audio Amplifier</h3>
-            <p>400W Output, Multiple Input Ports</p>
+            <h3>4-Channel Audio...</h3>
+            <p>400W Output, Multip...</p>
             <div class="price">Ksh 8,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=86">
         <div class="product-image"><img src="ent/ent8.jpg"></div>
         <div class="info-box">
-            <h3>Mini Bluetooth Woofer</h3>
-            <p>25W Output, Compact Design, Bass boost</p>
+            <h3>Mini Bluetooth....</h3>
+            <p>25W Output, Compa..</p>
             <div class="price">Ksh 3,299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (72)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=87">
         <div class="product-image"><img src="ent/ent9.jpg"></div>
         <div class="info-box">
-            <h3>Portable Bass Woofer</h3>
-            <p>70W Power Output, Bluetooth Connectivity</p>
+            <h3>Portable Bass...</h3>
+            <p>70W Power Outp....</p>
             <div class="price">Ksh 5,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (53)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=88">
         <div class="product-image"><img src="ent/ent10.jpg"></div>
         <div class="info-box">
-            <h3>Subwoofer and Amplifier Combo</h3>
-            <p>150W Power Output, Wired + Wireless</p>
+            <h3>Subwoofer and Am....</h3>
+            <p>150W Power Outp...</p>
             <div class="price">Ksh 13,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (2)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=89">
         <div class="product-image"><img src="ent/ent11.jpg"></div>
         <div class="info-box">
-            <h3>Home Audio Woofer 120W</h3>
-            <p>120W Power Output, Bluetooth + AUX</p>
+            <h3>Home Audio...</h3>
+            <p>120W Power Ou....</p>
             <div class="price">Ksh 9,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (43)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=90">
         <div class="product-image"><img src="ent/ent12.jpg"></div>
         <div class="info-box">
-            <h3>Wireless Amplifier for Speakers</h3>
-            <p>50W Output, Bluetooth Connectivity</p>
+            <h3>Wireless Ampl....</h3>
+            <p>50W Output, Blue...</p>
             <div class="price">Ksh 6,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=91">
         <div class="product-image"><img src="ent/ent13.jpg"></div>
         <div class="info-box">
-            <h3>Outdoor Waterproof Woofer</h3>
-            <p>40W Output, Bluetooth + Waterproof</p>
+            <h3>Outdoor Water....</h3>
+            <p>40W Output, Blu...</p>
             <div class="price">Ksh 7,199</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (32)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=92">
         <div class="product-image"><img src="ent/ent14.jpg"></div>
         <div class="info-box">
-            <h3>Portable Home Theater Amplifier</h3>
-            <p>150W Output, Wireless and Wired Options</p>
+            <h3>Portable Home....</h3>
+            <p>150W Output, Wire...</p>
             <div class="price">Ksh 12,499</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (86)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=93">
         <div class="product-image"><img src="ent/ent15.jpg"></div>
         <div class="info-box">
-            <h3>Dual Subwoofer System</h3>
-            <p>250W Output, Deep Bass, Bluetooth Connectivity</p>
+            <h3>Dual Subwoofer..</h3>
+            <p>250W Output, De....</p>
             <div class="price">Ksh 14,999</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (42)</p>
         </div>
     </a></div> 
     <div class="product"><a href="products.html?id=94">
         <div class="product-image"><img src="ent/ent16.jpg"></div>
         <div class="info-box">
-            <h3>High-Fidelity Amplifier</h3>
-            <p>200W Output, Ideal for Home Audio</p>
-            <div class="price">Ksh 11,299</div>    
+            <h3>High-Fidelity...</h3>
+            <p>200W Output, Id....</p>
+            <div class="price">Ksh 11,299</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (56)</p>    
         </div>
     </a></div>
     <div class="product"><a href="products.html?id=95">
         <div class="product-image"><img src="ent/ent17.jpg"></div>
         <div class="info-box">
-            <h3>High-Output Audio Amplifier</h3>
-            <p>350W Output, Perfect for Large Events</p>
-            <div class="price">Ksh 16,000</div>    
+            <h3>High-Output...</h3>
+            <p>350W Output, Perfec.....</p>
+            <div class="price">Ksh 16,000</div>
+            <p class="rating">Rating: ⭐⭐⭐⭐ (9)</p>    
         </div>
     </a></div> 
 </section>
@@ -888,8 +983,8 @@
 </section>
 
     <!-- Footer Section -->
-    <footer class="footer-box">
-        <p>&copy; 2024 Ephantus Electronic Products and Services. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Ephantus Electronic Products and Services. All rights reserved.| <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
     <!-- Script -->

@@ -1,9 +1,17 @@
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  footer p {
-    font-size: 1rem;
-  }
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.658);
+  color: rgba(255, 255, 255, 0.603);
+  text-align: center;
+  padding: 0.5rem 0;
+  
+}
+
+footer a {
+  color: #ffffffaf;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff3f3fab;
+}
