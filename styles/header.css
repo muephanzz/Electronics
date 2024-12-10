@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Header Styling */
 .header {
     display: flex;
     align-items: center;
@@ -21,7 +20,6 @@
     border-bottom: 1px solid #444;
 }
 
-/* Search Bar */
 .search-bar {
     display: flex;
     flex: 1;
@@ -85,8 +83,7 @@
     display: flex;
     gap: 20px;
     justify-content: left;
-    padding: 10px;
-    cursor: pointer;
+    padding: 2px;
     text-decoration: none;
     border-radius: 2px;
     position: fixed;
@@ -94,7 +91,7 @@
     left: 50px;
     top: 7.9%;
     background-color: #1e1e2f;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 3s ease-in-out;
 }
 
 #menu-box a {
@@ -109,7 +106,13 @@
     color: rgb(240, 72, 5);
 }
 
-/* Hamburger Menu Icon */
+.cat {
+    display: inline-block;
+    text-align: left;
+    background-color: #1e1e2f;
+    padding: 5px;
+    border: none;
+}
 .hamburger {
     display: none;
     flex-direction: column;
@@ -134,14 +137,12 @@
         flex-direction: column;
         position: absolute;
         top: 50px;
-        height: 450px;
-        width: 240px;
-        background-color: rgb(19, 17, 17);
-        border-radius: 5px;
-        left: 1px;
+        height: 940%;
+        width: 50%;
+        left: 0px;
     }
 
-    #menu-box a, .categorya{ 
+    #menu-box a, .category a{ 
         margin: 2px;
         padding: 10px;
         border: 1px solid rgba(31, 30, 30, 0.295);
@@ -157,8 +158,11 @@
     .category {
         display: block;
     }
-}
+    .cat {
+        display: block;
 
+    }
+}
 
 @media (max-width: 480px) {
     #menu-box {
@@ -169,5 +173,8 @@
         top: 50px;
         width: 200px;
         border-radius: 5px;
+    }
+    .cat {
+        display: block;
     }
 }
