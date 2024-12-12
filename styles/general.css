@@ -7,7 +7,7 @@
 
   body {
     font-family: Arial, sans-serif;
-    background-color: rgb(0, 0, 0);
+    background: radial-gradient(gold, rgb(0, 0, 0));
   }
 
   /* Media Query for Phones */

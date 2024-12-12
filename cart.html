@@ -27,3 +27,47 @@
 
 </body>
 </html>
+
+
+<header>
+    <div class="headerA">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">
+            <h2>Ephantronics</h2>
+        </div>
+        <div class="login">
+            <a href="logIn.html"><button id="login-button" title="Log In">👤</button></a>
+        </div>
+    </div>
+    <div class="">
+        <div id="search-container" class="search-bar">
+            <input type="text" placeholder="Search for products..." oninput="searchProducts(this.value)">
+            <button class="search-btn">🔍</button>
+        </div>
+        <div class="cart">
+            <div id="cart-container" style="display: none;"></div>
+            <a class="View Cart" href="cart.html">
+                <button id="cart-button" onclick="document.innerHTML(cart1)">🛒</button><a>
+            <span id="cart-count">0</span>
+        </div>
+    </div> 
+</header>
+<main>
+    <div id="menu-box">
+        <button class="cat"><a href="#home">Home</a></button>
+        <div>
+            <button class="cat"><a class="category" href="#smartphones">Smartphones</a></button>
+            <button class="cat"><a class="category" href="#laptops">Laptops</a></button>
+            <button class="cat"><a class="category" href="#headphones">Headphones and Airpods</a></button>
+            <button class="cat"><a class="category" href="#smart-home">Smart Home Devices</a></button>
+            <button class="cat"><a class="category" href="#tv">Televisions</a></button>
+            <button class="cat"><a class="category" href="#home-ent">Home Entertainment</a></button>          
+        </div>
+        <button class="cat"><a href="#about">About Us</a></button>        
+        <button class="cat"><a href="#about">Contacts</a></button>  
+    </div>
+</main>
